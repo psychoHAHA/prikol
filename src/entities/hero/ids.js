@@ -1,0 +1,1 @@
+﻿export const heroIds = {Axe:2,'Crystal Maiden':5,'Drow Ranger':6,Earthshaker:7,Juggernaut:8,'Phantom Lancer':12,Puck:13,'Storm Spirit':17,Sven:18,Lion:26,'Shadow Shaman':27,Sniper:35,'Phantom Assassin':44,'Dragon Knight':49,'Naga Siren':89,Magnus:97};
