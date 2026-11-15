@@ -1,46 +1,189 @@
 import { useEffect, useRef, useState } from 'react'
+
+import type {
+  GuideResponse,
+  HeroesResponse,
+  Hero,
+  ItemsResponse,
+  Position,
+  PositionsResponse,
+} from '../../shared/api/hero-stats'
+import type { Recommendation } from '../../shared/types/domains'
+
 import {
   getHeroes,
   getHeroMatchups,
   getPositions,
   getHeroItems,
   getHeroGuide,
-} from '../../shared/api/hero-stats.js'
-import { recommendFromStratz } from '../../features/draft/recommend.js'
+} from '../../shared/api/hero-stats'
+import { recommendFromStratz } from '../../features/draft/recommend'
 
-function ItemBuild({ hero, position, enemies }) {
-  const enemyIds = enemies.map(enemy => enemy.id)
-  const [state, setState] = useState(null)
-  const [guide, setGuide] = useState(null)
+interface ItemBuildProps {
+  hero: Hero
+  position: Position
+  enemies: Hero[]
+}
+
+interface TeamProps {
+  title: string
+  selected: string[]
+  other: string[]
+  names: string[]
+  limit: number
+  onChange: (names: string[]) => void
+  enemy?: boolean
+}
+
+type ItemsState =
+  | { loading: true }
+  | { data: ItemsResponse }
+  | { error: string }
+
+type GuideState = { loading: true } | { error: string } | GuideResponse
+
+function ItemBuild({ hero, position, enemies }: ItemBuildProps) {
+  const enemyIds = enemies.map((enemy) => enemy.id)
+  const [state, setState] = useState<ItemsState | null>(null)
+  const [guide, setGuide] = useState<GuideState | null>(null)
   useEffect(() => {
     const controller = new AbortController()
     setState({ loading: true })
     getHeroItems(hero.id, position, controller.signal)
-      .then(data => setState({ data }))
-      .catch(error => { if (error.name !== 'AbortError') setState({ error: error.message }) })
+      .then((data) => setState({ data }))
+      .catch((error) => {
+        if (error.name !== 'AbortError') setState({ error: error.message })
+      })
     return () => controller.abort()
   }, [hero.id, position])
-  useEffect(() => { const controller = new AbortController(); setGuide({ loading: true }); getHeroGuide(hero.id, enemyIds, position, controller.signal).then(setGuide).catch(error => { if (error.name !== 'AbortError') setGuide({ error: error.message }) }); return () => controller.abort() }, [hero.id, position, enemyIds.join(',')])
-  if (state?.loading || !state) return <p>Загружаем предметы…</p>
-  if (state.error) return <p role="alert">Не удалось загрузить предметы: {state.error}</p>
-  return <div className="item-build">
-    <p><strong>Популярные предметы на этой позиции</strong></p>
-    {state.data.items.length ? <ul>{state.data.items.map(item => <li key={item.itemId}>{item.name} — {item.games} покупок, победы в этих матчах: {(item.winRate * 100).toFixed(1)}%</li>)}</ul> : <p>Недостаточно данных о покупках.</p>}
-    <p>Это частые покупки по статистике STRATZ, а не готовый порядок сборки. Учитывай способности врагов и ход игры; процент побед не доказывает эффективность предмета.</p>
-    {guide?.loading && <p>Анализируем покупки в матчах против соперников…</p>}
-    {guide?.error && <p role="alert">Не удалось проанализировать матчи: {guide.error}</p>}
-    {guide?.guides?.length ? <div><p><strong>Порядок покупок в примерах матчей</strong></p><p>Проанализировано {guide.sampleSize} из {guide.requestedMatches} матчей: в каждом был хотя бы один выбранный соперник. Это не обязательно матчи против всего пика.</p>{guide.build.length ? <ol>{guide.build.map(item => <li key={item.itemId}>{item.name} — примерно {Math.floor(item.medianTime / 60)}:{String(item.medianTime % 60).padStart(2, '0')}, в {item.matches} из {guide.sampleSize} матчей</li>)}</ol> : <p>Для порядка покупок недостаточно повторяющихся данных.</p>}<p>Порядок основан на медианном времени покупки предмета в небольшой выборке; компоненты тоже могут попасть в список. Это ориентир, а не обязательная сборка или доказательство эффективности против конкретного героя.</p><p><strong>Примеры матчей:</strong></p>{guide.guides.map(item => <p key={item.againstHeroId}>{enemies.find(enemy => enemy.id === item.againstHeroId)?.name}: {item.matchCount} матчей {item.matchIds.slice(0, 3).map(id => <a key={id} href={`https://stratz.com/matches/${id}`} target="_blank" rel="noreferrer"> #{id}</a>)}</p>)}</div> : null}
-    <a href={`https://stratz.com/heroes/${hero.id}`} target="_blank" rel="noreferrer">Подробнее на STRATZ ↗</a>
-  </div>
+  useEffect(() => {
+    const controller = new AbortController()
+    setGuide({ loading: true })
+    getHeroGuide(hero.id, enemyIds, position, controller.signal)
+      .then(setGuide)
+      .catch((error) => {
+        if (error.name !== 'AbortError') setGuide({ error: error.message })
+      })
+    return () => controller.abort()
+  }, [hero.id, position, enemyIds.join(',')])
+  if (!state || 'loading' in state) {
+    return <p>Загружаем предметы…</p>
+  }
+  if ('error' in state) {
+    return <p role="alert">Не удалось загрузить предметы: {state.error}</p>
+  }
+  return (
+    <div className="item-build">
+      <p>
+        <strong>Популярные предметы на этой позиции</strong>
+      </p>
+      {state.data.items.length ? (
+        <ul>
+          {state.data.items.map((item) => (
+            <li key={item.itemId}>
+              {item.name} — {item.games} покупок, победы в этих матчах:{' '}
+              {(item.winRate * 100).toFixed(1)}%
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>Недостаточно данных о покупках.</p>
+      )}
+      <p>
+        Это частые покупки по статистике STRATZ, а не готовый порядок сборки.
+        Учитывай способности врагов и ход игры; процент побед не доказывает
+        эффективность предмета.
+      </p>
+      {guide && 'loading' in guide && (
+        <p>Анализируем покупки в матчах против соперников…</p>
+      )}
+
+      {guide && 'error' in guide && (
+        <p role="alert">Не удалось проанализировать матчи: {guide.error}</p>
+      )}
+
+      {guide && 'guides' in guide && guide.guides.length ? (
+        <div>
+          <p>
+            <strong>Порядок покупок в примерах матчей</strong>
+          </p>
+          <p>
+            Проанализировано {guide.sampleSize} из {guide.requestedMatches}{' '}
+            матчей: в каждом был хотя бы один выбранный соперник. Это не
+            обязательно матчи против всего пика.
+          </p>
+          {guide.build.length ? (
+            <ol>
+              {guide.build.map((item) => (
+                <li key={item.itemId}>
+                  {item.name} — примерно {Math.floor(item.medianTime / 60)}:
+                  {String(item.medianTime % 60).padStart(2, '0')}, в{' '}
+                  {item.matches} из {guide.sampleSize} матчей
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p>Для порядка покупок недостаточно повторяющихся данных.</p>
+          )}
+          <p>
+            Порядок основан на медианном времени покупки предмета в небольшой
+            выборке; компоненты тоже могут попасть в список. Это ориентир, а не
+            обязательная сборка или доказательство эффективности против
+            конкретного героя.
+          </p>
+          <p>
+            <strong>Примеры матчей:</strong>
+          </p>
+          {guide.guides.map((item) => (
+            <p key={item.againstHeroId}>
+              {enemies.find((enemy) => enemy.id === item.againstHeroId)?.name}:{' '}
+              {item.matchCount} матчей{' '}
+              {item.matchIds.slice(0, 3).map((id) => (
+                <a
+                  key={id}
+                  href={`https://stratz.com/matches/${id}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {' '}
+                  #{id}
+                </a>
+              ))}
+            </p>
+          ))}
+        </div>
+      ) : null}
+      <a
+        href={`https://stratz.com/heroes/${hero.id}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Подробнее на STRATZ ↗
+      </a>
+    </div>
+  )
 }
 
-function Team({ title, selected, other, names, limit, onChange, enemy }) {
+function Team({
+  title,
+  selected,
+  other,
+  names,
+  limit,
+  onChange,
+  enemy,
+}: TeamProps) {
   const [search, setSearch] = useState('')
   const [open, setOpen] = useState(false)
-  const root = useRef(null)
+  const root = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    function close(event) {
-      if (!root.current?.contains(event.target)) setOpen(false)
+    function close(event: PointerEvent) {
+      if (
+        event.target instanceof Node &&
+        !root.current?.contains(event.target)
+      ) {
+        setOpen(false)
+      }
     }
     document.addEventListener('pointerdown', close)
     return () => document.removeEventListener('pointerdown', close)
@@ -130,14 +273,16 @@ function Team({ title, selected, other, names, limit, onChange, enemy }) {
 }
 
 export function DraftPage() {
-  const [data, setData] = useState(null),
-    [error, setError] = useState(null),
-    [allies, setAllies] = useState([]),
-    [enemies, setEnemies] = useState([]),
-    [position, setPosition] = useState('POSITION_1'),
-    [results, setResults] = useState(null),
-    [loading, setLoading] = useState(false)
-  const [selectedHero, setSelectedHero] = useState(null)
+  const [data, setData] = useState<(HeroesResponse & PositionsResponse) | null>(
+    null,
+  )
+  const [error, setError] = useState<string | null>(null)
+  const [allies, setAllies] = useState<string[]>([])
+  const [enemies, setEnemies] = useState<string[]>([])
+  const [position, setPosition] = useState<Position>('POSITION_1')
+  const [results, setResults] = useState<Recommendation[] | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [selectedHero, setSelectedHero] = useState<number | null>(null)
   useEffect(() => {
     const controller = new AbortController()
     Promise.all([getHeroes(controller.signal), getPositions(controller.signal)])
@@ -155,9 +300,15 @@ export function DraftPage() {
     setResults(null)
     try {
       const responses = await Promise.all(
-        enemies.map((name) =>
-          getHeroMatchups(data.heroes.find((hero) => hero.name === name).id),
-        ),
+        enemies.map((name) => {
+          const hero = data.heroes.find((item) => item.name === name)
+
+          if (!hero) {
+            throw new Error(`Герой ${name} не найден`)
+          }
+
+          return getHeroMatchups(hero.id)
+        }),
       )
       const totals = new Map()
       for (const row of data.positions) {
@@ -193,8 +344,8 @@ export function DraftPage() {
           data.heroes,
         ),
       )
-    } catch (e) {
-      setError(e.message)
+    } catch (error) {
+      setError(error instanceof Error ? error.message : 'Неизвестная ошибка')
     } finally {
       setLoading(false)
     }
@@ -249,7 +400,7 @@ export function DraftPage() {
             id="position"
             value={position}
             onChange={(e) => {
-              setPosition(e.target.value)
+              setPosition(e.target.value as Position)
               setResults(null)
             }}
           >
@@ -320,8 +471,30 @@ export function DraftPage() {
                     .join('; ')}
                   .
                 </p>
-                <button className="textbtn item-button" onClick={() => setSelectedHero(selectedHero === r.hero.id ? null : r.hero.id)}>{selectedHero === r.hero.id ? 'Скрыть предметы' : 'Посмотреть предметы'} ↗</button>
-                {selectedHero === r.hero.id && <ItemBuild hero={r.hero} position={position} enemies={enemies.map(name => data.heroes.find(hero => hero.name === name)).filter(Boolean)} />}
+                <button
+                  className="textbtn item-button"
+                  onClick={() =>
+                    setSelectedHero(
+                      selectedHero === r.hero.id ? null : r.hero.id,
+                    )
+                  }
+                >
+                  {selectedHero === r.hero.id
+                    ? 'Скрыть предметы'
+                    : 'Посмотреть предметы'}{' '}
+                  ↗
+                </button>
+                {selectedHero === r.hero.id && (
+                  <ItemBuild
+                    hero={r.hero}
+                    position={position}
+                    enemies={enemies
+                      .map((name) =>
+                        data?.heroes.find((hero) => hero.name === name),
+                      )
+                      .filter((hero): hero is Hero => hero !== undefined)}
+                  />
+                )}
               </article>
             ))
           ) : (
