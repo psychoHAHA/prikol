@@ -1,281 +1,33 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from "react"
 
 import type {
-  GuideResponse,
   HeroesResponse,
-  ItemsResponse,
   Position,
   PositionsResponse,
-} from '../../shared/api/hero-stats'
+} from "../../shared/api/hero-stats"
 
-import type { Hero } from '../../shared/types/domains'
+import type { Hero } from "../../shared/types/domains"
 
-import type { Recommendation } from '../../shared/types/domains'
+import type { Recommendation } from "../../shared/types/domains"
 
 import {
   getHeroes,
   getHeroMatchups,
   getPositions,
-  getHeroItems,
-  getHeroGuide,
-} from '../../shared/api/hero-stats'
-import { recommendFromStratz } from '../../features/draft/recommend'
+} from "../../shared/api/hero-stats"
+import { recommendFromStratz } from "../../features/draft/recommend"
 
-interface ItemBuildProps {
-  hero: Hero
-  position: Position
-  enemies: Hero[]
-}
+import { Header } from "../../widgets/header/Header"
+import { Intro } from "../../widgets/intro/Intro"
+import { Footer } from "../../widgets/footer/Footer"
+import { DraftSetup } from "../../widgets/draft-workspace/DraftSetup"
+import { RecommendationPanel } from "../../widgets/recommendation-panel/RecommendationPanel"
 
-interface TeamProps {
-  title: string
-  selected: string[]
-  other: string[]
-  names: string[]
-  limit: number
-  onChange: (names: string[]) => void
-  enemy?: boolean
-}
-
-type ItemsState =
-  | { loading: true }
-  | { data: ItemsResponse }
-  | { error: string }
-
-type GuideState = { loading: true } | { error: string } | GuideResponse
+import { RecommendationCard } from "../../features/draft/recommendation-card/RecommendationCard"
+import { ItemBuild } from "../../features/draft/item-build/ItemBuild"
 
 export function isAbortError(error: unknown): boolean {
-  return error instanceof Error && error.name === 'AbortError'
-}
-
-function ItemBuild({ hero, position, enemies }: ItemBuildProps) {
-  const enemyIds = enemies.map((enemy) => enemy.id)
-  const [state, setState] = useState<ItemsState | null>(null)
-  const [guide, setGuide] = useState<GuideState | null>(null)
-  useEffect(() => {
-    const controller = new AbortController()
-    setState({ loading: true })
-    getHeroItems(hero.id, position, controller.signal)
-      .then((data) => setState({ data }))
-      .catch((error) => {
-        if (error.name !== 'AbortError') setState({ error: error.message })
-      })
-    return () => controller.abort()
-  }, [hero.id, position])
-  useEffect(() => {
-    const controller = new AbortController()
-    setGuide({ loading: true })
-    getHeroGuide(hero.id, enemyIds, position, controller.signal)
-      .then(setGuide)
-      .catch((error) => {
-        if (error.name !== 'AbortError') setGuide({ error: error.message })
-      })
-    return () => controller.abort()
-  }, [hero.id, position, enemyIds.join(',')])
-  if (!state || 'loading' in state) {
-    return <p>Загружаем предметы…</p>
-  }
-  if ('error' in state) {
-    return <p role="alert">Не удалось загрузить предметы: {state.error}</p>
-  }
-  return (
-    <div className="item-build">
-      <p>
-        <strong>Популярные предметы на этой позиции</strong>
-      </p>
-      {state.data.items.length ? (
-        <ul>
-          {state.data.items.map((item) => (
-            <li key={item.itemId}>
-              {item.name} — {item.games} покупок, победы в этих матчах:{' '}
-              {(item.winRate * 100).toFixed(1)}%
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>Недостаточно данных о покупках.</p>
-      )}
-      <p>
-        Это частые покупки по статистике STRATZ, а не готовый порядок сборки.
-        Учитывай способности врагов и ход игры; процент побед не доказывает
-        эффективность предмета.
-      </p>
-      {guide && 'loading' in guide && (
-        <p>Анализируем покупки в матчах против соперников…</p>
-      )}
-
-      {guide && 'error' in guide && (
-        <p role="alert">Не удалось проанализировать матчи: {guide.error}</p>
-      )}
-
-      {guide && 'guides' in guide && guide.guides.length ? (
-        <div>
-          <p>
-            <strong>Порядок покупок в примерах матчей</strong>
-          </p>
-          <p>
-            Проанализировано {guide.sampleSize} из {guide.requestedMatches}{' '}
-            матчей: в каждом был хотя бы один выбранный соперник. Это не
-            обязательно матчи против всего пика.
-          </p>
-          {guide.build.length ? (
-            <ol>
-              {guide.build.map((item) => (
-                <li key={item.itemId}>
-                  {item.name} — примерно {Math.floor(item.medianTime / 60)}:
-                  {String(item.medianTime % 60).padStart(2, '0')}, в{' '}
-                  {item.matches} из {guide.sampleSize} матчей
-                </li>
-              ))}
-            </ol>
-          ) : (
-            <p>Для порядка покупок недостаточно повторяющихся данных.</p>
-          )}
-          <p>
-            Порядок основан на медианном времени покупки предмета в небольшой
-            выборке; компоненты тоже могут попасть в список. Это ориентир, а не
-            обязательная сборка или доказательство эффективности против
-            конкретного героя.
-          </p>
-          <p>
-            <strong>Примеры матчей:</strong>
-          </p>
-          {guide.guides.map((item) => (
-            <p key={item.againstHeroId}>
-              {enemies.find((enemy) => enemy.id === item.againstHeroId)?.name}:{' '}
-              {item.matchCount} матчей{' '}
-              {item.matchIds.slice(0, 3).map((id) => (
-                <a
-                  key={id}
-                  href={`https://stratz.com/matches/${id}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {' '}
-                  #{id}
-                </a>
-              ))}
-            </p>
-          ))}
-        </div>
-      ) : null}
-      <a
-        href={`https://stratz.com/heroes/${hero.id}`}
-        target="_blank"
-        rel="noreferrer"
-      >
-        Подробнее на STRATZ ↗
-      </a>
-    </div>
-  )
-}
-
-function Team({
-  title,
-  selected,
-  other,
-  names,
-  limit,
-  onChange,
-  enemy,
-}: TeamProps) {
-  const [search, setSearch] = useState('')
-  const [open, setOpen] = useState(false)
-  const root = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    function close(event: PointerEvent) {
-      if (
-        event.target instanceof Node &&
-        !root.current?.contains(event.target)
-      ) {
-        setOpen(false)
-      }
-    }
-    document.addEventListener('pointerdown', close)
-    return () => document.removeEventListener('pointerdown', close)
-  }, [])
-  const options = names.filter(
-    (name) =>
-      !selected.includes(name) &&
-      !other.includes(name) &&
-      name.toLowerCase().includes(search.trim().toLowerCase()),
-  )
-  return (
-    <div>
-      <label>
-        {title}{' '}
-        <span>
-          {selected.length} / {limit}
-        </span>
-      </label>
-      <div className="slots">
-        {selected.length ? (
-          selected.map((name) => (
-            <button
-              key={name}
-              className={'chip ' + (enemy ? 'enemy' : '')}
-              onClick={() => onChange(selected.filter((item) => item !== name))}
-              aria-label={'Удалить ' + name}
-            >
-              {name} ×
-            </button>
-          ))
-        ) : (
-          <span className="placeholder">Пока никого</span>
-        )}
-      </div>
-      <div className="hero-search" ref={root}>
-        <input
-          aria-label={'Поиск героя: ' + title}
-          aria-expanded={open}
-          aria-controls={enemy ? 'enemy-options' : 'ally-options'}
-          role="combobox"
-          autoComplete="off"
-          placeholder="Поиск героя..."
-          value={search}
-          disabled={selected.length >= limit || !names.length}
-          onFocus={() => setOpen(true)}
-          onChange={(event) => {
-            setSearch(event.target.value)
-            setOpen(true)
-          }}
-          onKeyDown={(event) => {
-            if (event.key === 'Escape') setOpen(false)
-            if (event.key === 'Enter' && open && options.length) {
-              event.preventDefault()
-              onChange([...selected, options[0]])
-              setSearch('')
-              setOpen(false)
-            }
-          }}
-        />
-        {open && (
-          <div
-            className="hero-options"
-            id={enemy ? 'enemy-options' : 'ally-options'}
-          >
-            {options.length ? (
-              options.map((name) => (
-                <button
-                  key={name}
-                  type="button"
-                  onClick={() => {
-                    onChange([...selected, name])
-                    setSearch('')
-                    setOpen(false)
-                  }}
-                >
-                  {name}
-                </button>
-              ))
-            ) : (
-              <span>Герой не найден</span>
-            )}
-          </div>
-        )}
-      </div>
-    </div>
-  )
+  return error instanceof Error && error.name === "AbortError"
 }
 
 export function DraftPage() {
@@ -285,7 +37,7 @@ export function DraftPage() {
   const [error, setError] = useState<string | null>(null)
   const [allies, setAllies] = useState<string[]>([])
   const [enemies, setEnemies] = useState<string[]>([])
-  const [position, setPosition] = useState<Position>('POSITION_1')
+  const [position, setPosition] = useState<Position>("POSITION_1")
   const [results, setResults] = useState<Recommendation[] | null>(null)
   const [loading, setLoading] = useState(false)
   const [selectedHero, setSelectedHero] = useState<number | null>(null)
@@ -312,7 +64,7 @@ export function DraftPage() {
       .then(([heroes, positions]) => setData({ ...heroes, ...positions }))
       .catch((e) => {
         if (!isAbortError(e)) {
-          setError(e instanceof Error ? e.message : 'Неизвестная ошибка')
+          setError(e instanceof Error ? e.message : "Неизвестная ошибка")
         }
       })
     return () => controller.abort()
@@ -340,16 +92,17 @@ export function DraftPage() {
           return getHeroMatchups(hero.id, controller.signal)
         }),
       )
-      if (controller.signal.aborted || searchController.current !== controller) return
+      if (controller.signal.aborted || searchController.current !== controller)
+        return
       const totals = new Map()
       for (const row of data.positions) {
         if (
           ![
-            'POSITION_1',
-            'POSITION_2',
-            'POSITION_3',
-            'POSITION_4',
-            'POSITION_5',
+            "POSITION_1",
+            "POSITION_2",
+            "POSITION_3",
+            "POSITION_4",
+            "POSITION_5",
           ].includes(row.position)
         )
           continue
@@ -378,7 +131,7 @@ export function DraftPage() {
     } catch (error) {
       if (isAbortError(error) || controller.signal.aborted) return
 
-      setError(error instanceof Error ? error.message : 'Неизвестная ошибка')
+      setError(error instanceof Error ? error.message : "Неизвестная ошибка")
     } finally {
       if (searchController.current === controller) {
         searchController.current = null
@@ -388,102 +141,42 @@ export function DraftPage() {
   }
   return (
     <main>
-      <header>
-        <span className="brand">
-          ◈ DRAFT LAB <small>/ DOTA 2</small>
-        </span>
-        <span className="badge">
-          STRATZ · {data?.gameVersion?.name || 'ЗАГРУЗКА'}
-        </span>
-      </header>
-      <section className="intro">
-        <p className="eyebrow">ТВОЙ СЛЕДУЮЩИЙ ПИК</p>
-        <h1>
-          Собери драфт.
-          <br />
-          <em>Найди ответ.</em>
-        </h1>
-        <p>
-          Выбери позицию и соперников — статистика STRATZ поможет найти героя.
-        </p>
-      </section>
+      <Header gameVersion={data?.gameVersion?.name} />
+      <Intro />
       {error && (
         <p className="hint" role="alert">
           Ошибка: {error}
         </p>
       )}
       <div className="layout">
-        <section className="panel">
-          <div className="panelhead">
-            <div>
-              <span className="step">01 / ДРАФТ</span>
-              <h2>Расскажи о матче</h2>
-            </div>
-            <button
-              className="textbtn"
-              onClick={() => {
-                invalidateSearch()
-                setAllies([])
-                setEnemies([])
-                setResults(null)
-                setPosition('POSITION_1')
-              }}
-            >
-              Очистить ↗
-            </button>
-          </div>
-          <label htmlFor="position">ТВОЯ ПОЗИЦИЯ</label>
-          <select
-            id="position"
-            value={position}
-            onChange={(e) => {
-              invalidateSearch()
-              setPosition(e.target.value as Position)
-              setResults(null)
-            }}
-          >
-            <option value="POSITION_1">1 · Керри</option>
-            <option value="POSITION_2">2 · Мидер</option>
-            <option value="POSITION_3">3 · Оффлейнер</option>
-            <option value="POSITION_4">4 · Частичная поддержка</option>
-            <option value="POSITION_5">5 · Полная поддержка</option>
-          </select>
-          <div className="teams">
-            <Team
-              title="СОЮЗНИКИ"
-              selected={allies}
-              other={enemies}
-              names={names}
-              limit={4}
-              onChange={(names) => { invalidateSearch(); setAllies(names) }}
-            />
-            <Team
-              title="ПРОТИВНИКИ"
-              selected={enemies}
-              other={allies}
-              names={names}
-              limit={5}
-              onChange={(names) => { invalidateSearch(); setEnemies(names) }}
-              enemy
-            />
-          </div>
-          <button
-            className="primary"
-            onClick={find}
-            disabled={!data || !enemies.length || loading}
-          >
-            {loading ? 'Загружаем статистику…' : 'Найти контрпики'}{' '}
-            <span>↗</span>
-          </button>
-          <p className="hint">После изменения драфта нажми кнопку снова.</p>
-        </section>
-        <section className="results">
-          <div className="panelhead">
-            <div>
-              <span className="step">02 / STRATZ</span>
-              <h2>Рекомендации</h2>
-            </div>
-          </div>
+        <DraftSetup
+          position={position}
+          allies={allies}
+          enemies={enemies}
+          names={names}
+          dataReady={Boolean(data)}
+          loading={loading}
+          onPositionChange={(nextPosition) => {
+            invalidateSearch()
+            setPosition(nextPosition)
+          }}
+          onAlliesChange={(nextAllies) => {
+            invalidateSearch()
+            setAllies(nextAllies)
+          }}
+          onEnemiesChange={(nextEnemies) => {
+            invalidateSearch()
+            setEnemies(nextEnemies)
+          }}
+          onReset={() => {
+            invalidateSearch()
+            setAllies([])
+            setEnemies([])
+            setPosition("POSITION_1")
+          }}
+          onFind={find}
+        />
+        <RecommendationPanel>
           {results === null ? (
             <div className="empty">
               <div className="emptyicon">✳</div>
@@ -491,40 +184,23 @@ export function DraftPage() {
               <p>Для расчёта нужен хотя бы один герой противника.</p>
             </div>
           ) : results.length ? (
-            results.map((r, i) => (
-              <article className="card" key={r.hero.id}>
-                <h3>
-                  <span>0{i + 1}</span>
-                  {r.hero.name}
-                </h3>
-                <p>
-                  <strong>Матчап:</strong> доля побед против выбранных
-                  соперников {((100 * r.score) / r.games).toFixed(1)}% (
-                  {r.games} игр).
-                </p>
-                <p>
-                  <strong>Против:</strong>{' '}
-                  {r.against
-                    .map((x) => `${x.name} — ${(100 * x.winRate).toFixed(1)}%`)
-                    .join('; ')}
-                  .
-                </p>
-                <button
-                  className="textbtn item-button"
-                  onClick={() =>
-                    setSelectedHero(
-                      selectedHero === r.hero.id ? null : r.hero.id,
-                    )
-                  }
-                >
-                  {selectedHero === r.hero.id
-                    ? 'Скрыть предметы'
-                    : 'Посмотреть предметы'}{' '}
-                  ↗
-                </button>
-                {selectedHero === r.hero.id && (
+            results.map((recommendation, index) => (
+              <RecommendationCard
+                key={recommendation.hero.id}
+                recommendation={recommendation}
+                index={index}
+                expanded={selectedHero === recommendation.hero.id}
+                onToggle={() =>
+                  setSelectedHero(
+                    selectedHero === recommendation.hero.id
+                      ? null
+                      : recommendation.hero.id,
+                  )
+                }
+              >
+                {selectedHero === recommendation.hero.id && (
                   <ItemBuild
-                    hero={r.hero}
+                    hero={recommendation.hero}
                     position={position}
                     enemies={enemies
                       .map((name) =>
@@ -533,7 +209,7 @@ export function DraftPage() {
                       .filter((hero): hero is Hero => hero !== undefined)}
                   />
                 )}
-              </article>
+              </RecommendationCard>
             ))
           ) : (
             <div className="empty">
@@ -541,24 +217,9 @@ export function DraftPage() {
               <p>Для выбранной позиции и соперников нет подходящих матчапов.</p>
             </div>
           )}
-        </section>
+        </RecommendationPanel>
       </div>
-      <footer>
-        <div>
-          <strong>Данные STRATZ</strong>
-          <p>
-            Для позиции учитываются герои с не менее 30 матчами и долей этой
-            позиции от 15% игр героя. Матчапы охватывают все позиции; статистика
-            не предсказывает исход отдельной игры.
-          </p>
-        </div>
-        <div className="sources">
-          ИСТОЧНИК
-          <a href="https://stratz.com/" target="_blank" rel="noreferrer">
-            STRATZ ↗
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 }
