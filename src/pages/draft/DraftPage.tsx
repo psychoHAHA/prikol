@@ -3,11 +3,13 @@ import { useEffect, useRef, useState } from 'react'
 import type {
   GuideResponse,
   HeroesResponse,
-  Hero,
   ItemsResponse,
   Position,
   PositionsResponse,
 } from '../../shared/api/hero-stats'
+
+import type { Hero } from '../../shared/types/domains'
+
 import type { Recommendation } from '../../shared/types/domains'
 
 import {
@@ -41,6 +43,10 @@ type ItemsState =
   | { error: string }
 
 type GuideState = { loading: true } | { error: string } | GuideResponse
+
+export function isAbortError(error: unknown): boolean {
+  return error instanceof Error && error.name === 'AbortError'
+}
 
 function ItemBuild({ hero, position, enemies }: ItemBuildProps) {
   const enemyIds = enemies.map((enemy) => enemy.id)
@@ -283,18 +289,42 @@ export function DraftPage() {
   const [results, setResults] = useState<Recommendation[] | null>(null)
   const [loading, setLoading] = useState(false)
   const [selectedHero, setSelectedHero] = useState<number | null>(null)
+  const searchController = useRef<AbortController | null>(null)
+
+  function invalidateSearch() {
+    searchController.current?.abort()
+    searchController.current = null
+    setLoading(false)
+    setResults(null)
+    setSelectedHero(null)
+    setError(null)
+  }
+
+  useEffect(() => {
+    return () => {
+      searchController.current?.abort()
+    }
+  }, [])
+
   useEffect(() => {
     const controller = new AbortController()
     Promise.all([getHeroes(controller.signal), getPositions(controller.signal)])
       .then(([heroes, positions]) => setData({ ...heroes, ...positions }))
       .catch((e) => {
-        if (e.name !== 'AbortError') setError(e.message)
+        if (!isAbortError(e)) {
+          setError(e instanceof Error ? e.message : 'Неизвестная ошибка')
+        }
       })
     return () => controller.abort()
   }, [])
   const names = data?.heroes.map((hero) => hero.name).sort() || []
   const find = async () => {
     if (!enemies.length || !data) return
+
+    searchController.current?.abort()
+
+    const controller = new AbortController()
+    searchController.current = controller
     setLoading(true)
     setError(null)
     setResults(null)
@@ -307,9 +337,10 @@ export function DraftPage() {
             throw new Error(`Герой ${name} не найден`)
           }
 
-          return getHeroMatchups(hero.id)
+          return getHeroMatchups(hero.id, controller.signal)
         }),
       )
+      if (controller.signal.aborted || searchController.current !== controller) return
       const totals = new Map()
       for (const row of data.positions) {
         if (
@@ -345,9 +376,14 @@ export function DraftPage() {
         ),
       )
     } catch (error) {
+      if (isAbortError(error) || controller.signal.aborted) return
+
       setError(error instanceof Error ? error.message : 'Неизвестная ошибка')
     } finally {
-      setLoading(false)
+      if (searchController.current === controller) {
+        searchController.current = null
+        setLoading(false)
+      }
     }
   }
   return (
@@ -386,6 +422,7 @@ export function DraftPage() {
             <button
               className="textbtn"
               onClick={() => {
+                invalidateSearch()
                 setAllies([])
                 setEnemies([])
                 setResults(null)
@@ -400,6 +437,7 @@ export function DraftPage() {
             id="position"
             value={position}
             onChange={(e) => {
+              invalidateSearch()
               setPosition(e.target.value as Position)
               setResults(null)
             }}
@@ -417,7 +455,7 @@ export function DraftPage() {
               other={enemies}
               names={names}
               limit={4}
-              onChange={setAllies}
+              onChange={(names) => { invalidateSearch(); setAllies(names) }}
             />
             <Team
               title="ПРОТИВНИКИ"
@@ -425,7 +463,7 @@ export function DraftPage() {
               other={allies}
               names={names}
               limit={5}
-              onChange={setEnemies}
+              onChange={(names) => { invalidateSearch(); setEnemies(names) }}
               enemy
             />
           </div>
@@ -507,7 +545,7 @@ export function DraftPage() {
       </div>
       <footer>
         <div>
-          <strong>Данные STRATZ, без предметов.</strong>
+          <strong>Данные STRATZ</strong>
           <p>
             Для позиции учитываются герои с не менее 30 матчами и долей этой
             позиции от 15% игр героя. Матчапы охватывают все позиции; статистика

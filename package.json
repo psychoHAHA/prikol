@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "server": "node --env-file=.env.local server/index.js",
-    "start": "node server/index.js",
-    "build": "vite build",
+    "server": "npm run build:server && node --env-file=.env.local dist-server/index.js",
+    "start": "node dist-server/index.js",
+    "build": "vite build --configLoader runner && npm run build:server",
+    "build:server": "tsc -p tsconfig.server.json",
+    "check": "npm run typecheck && npm test && npm run build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "test": "vitest run --configLoader runner",
     "check:stratz": "node --env-file=.env.local scripts/check-stratz.js",
     "query:stratz": "node --env-file=.env.local scripts/query-stratz.js"
   },
@@ -19,6 +21,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "typescript": "^7.0.2",

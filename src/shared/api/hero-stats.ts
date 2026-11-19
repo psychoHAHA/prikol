@@ -6,25 +6,81 @@ import type {
   PositionStats,
 } from '../types/domains'
 
-export type {
-  Hero,
-  Item,
-  Matchup,
-  Position,
-  PositionStats,
-} from '../types/domains'
+export interface HeroApiDto {
+  id: number
+  name: string
+}
 
-interface ApiError {
+function isHeroApiDto(value: unknown): value is HeroApiDto {
+  if (typeof value !== 'object' || value === null) {
+    return false
+  }
+
+  const hero = value as Record<string, unknown>
+
+  return (
+    typeof hero.id === 'number' &&
+    typeof hero.name === 'string' &&
+    hero.name.trim().length > 0
+  )
+}
+
+function isGameVersionDto(value: unknown): value is GameVersionDto {
+  if (typeof value !== 'object' || value === null) {
+    return false
+  }
+
+  const version = value as Record<string, unknown>
+
+  return (
+    typeof version.id === 'number' &&
+    typeof version.name === 'string' &&
+    typeof version.asOfDateTime === 'number' &&
+    Number.isFinite(version.asOfDateTime)
+  )
+}
+
+function isHeroesApiResponse(value: unknown): value is {
+  heroes: unknown[]
+  fetchedAt: string
+  gameVersion?: GameVersionDto
+} {
+  if (typeof value !== 'object' || value === null) {
+    return false
+  }
+
+  const response = value as Record<string, unknown>
+
+  return (
+    Array.isArray(response.heroes) &&
+    typeof response.fetchedAt === 'string' &&
+    (response.gameVersion === undefined ||
+      isGameVersionDto(response.gameVersion))
+  )
+}
+
+function toHero(dto: HeroApiDto): Hero {
+  return {
+    id: dto.id,
+    name: dto.name,
+  }
+}
+
+export type { Item, Matchup, Position, PositionStats } from '../types/domains'
+
+interface ApiErrorPayload {
   error?: string
+}
+
+interface GameVersionDto {
+  id: number
+  name: string
+  asOfDateTime: number
 }
 
 export interface HeroesResponse {
   heroes: Hero[]
-  gameVersion?: {
-    id: number
-    name: string
-    asOfDateTime: string
-  }
+  gameVersion?: GameVersionDto
   fetchedAt: string
 }
 
@@ -61,33 +117,75 @@ export interface GuideBuildItem {
   medianTime: number
 }
 
-export interface GuideResponse {
+interface GuideBase {
   guides: GuideSummary[]
   build: GuideBuildItem[]
-  sampleSize?: number
-  requestedMatches?: number
-  heroId?: number
-  position?: Position
-  sourceUrl?: string
+}
+
+export type GuideResponse = GuideBase & (
+  | { sampleSize: number; requestedMatches: number; heroId: number; position: Position; sourceUrl: string }
+  | { sampleSize?: never; requestedMatches?: never; heroId?: never; position?: never; sourceUrl?: never }
+)
+
+export class ApiError extends Error {
+  readonly status: number
+
+  constructor(message: string, status: number) {
+    super(message)
+    this.name = 'ApiError'
+    this.status = status
+  }
 }
 
 async function readResponse<T>(
   response: Response,
   fallbackMessage: string,
 ): Promise<T> {
-  const data = (await response.json()) as T & ApiError
+  let data: (T & ApiErrorPayload) | null = null
 
-  if (!response.ok) {
-    throw new Error(data.error || fallbackMessage)
+  try {
+    data = (await response.json()) as T & ApiErrorPayload
+  } catch {
+    if (!response.ok) {
+      throw new ApiError(fallbackMessage, response.status)
+    }
+
+    throw new Error('Сервер вернул некорректный JSON')
   }
 
-  return data
+  if (!response.ok) {
+    const message =
+      data !== null &&
+      typeof data === 'object' &&
+      typeof data.error === 'string' &&
+      data.error.trim().length > 0
+        ? data.error
+        : fallbackMessage
+
+    throw new ApiError(message, response.status)
+  }
+
+  return data as T
 }
 
 export async function getHeroes(signal?: AbortSignal): Promise<HeroesResponse> {
   const response = await fetch('/api/heroes', { signal })
 
-  return readResponse<HeroesResponse>(response, 'Не удалось загрузить героев')
+  const data = await readResponse<unknown>(
+    response,
+    'Не удалось загрузить героев',
+  )
+
+  if (!isHeroesApiResponse(data)) {
+    throw new Error('Сервер вернул некорректный список героев')
+  }
+
+  const validHeroes = data.heroes.filter(isHeroApiDto)
+
+  return {
+    ...data,
+    heroes: validHeroes.map(toHero),
+  }
 }
 
 export async function getHeroMatchups(
@@ -96,7 +194,10 @@ export async function getHeroMatchups(
 ): Promise<MatchupsResponse> {
   const response = await fetch(`/api/heroes/${heroId}/matchups`, { signal })
 
-  return readResponse<MatchupsResponse>(response, 'Не удалось загрузить матчапы')
+  return readResponse<MatchupsResponse>(
+    response,
+    'Не удалось загрузить матчапы',
+  )
 }
 
 export async function getPositions(
@@ -104,7 +205,10 @@ export async function getPositions(
 ): Promise<PositionsResponse> {
   const response = await fetch('/api/positions', { signal })
 
-  return readResponse<PositionsResponse>(response, 'Не удалось загрузить позиции')
+  return readResponse<PositionsResponse>(
+    response,
+    'Не удалось загрузить позиции',
+  )
 }
 
 export async function getHeroItems(
