@@ -13,7 +13,7 @@ export function expertInsightFor(
   const reasons = entries.flatMap((entry) =>
     entry.counters
       .filter((counter) => counter.hero === recommendedHero)
-      .map((counter) => `РџСЂРѕС‚РёРІ ${entry.hero}: ${counter.reason}`),
+      .map((counter) => `Против ${entry.hero}: ${counter.reason}`),
   )
   if (!reasons.length) return undefined
   const items = entries.flatMap((entry) => entry.items)

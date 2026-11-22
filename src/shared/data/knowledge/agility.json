@@ -17,7 +17,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Вот лишь несколько контрпиков, распределённые по игровым позициям: Medusa Medusa."
+          "reason": "Вот лишь несколько контрпиков, распределённые по игровым позициям: Medusa."
         },
         {
           "hero": "Axe",
@@ -37,14 +37,14 @@
             "offlane",
             "support"
           ],
-          "reason": "Против Bloodseeker Bloodseeker хорошо работают и другие герои с большим количеством «хила», например, Omniknight Omniknight или Chen Chen."
+          "reason": "Против Bloodseeker хорошо работают и другие герои с большим количеством «хила», например, Omniknight Omniknight или Chen Chen."
         }
       ],
       "items": [],
       "tips": [
         "Чтобы остановить разогнанного БСа, используйте на него дизейблы.",
         "Также не давайте ему бить с руки (Heaven's Halberd Heaven's Halberd в помощь) и снимайте его щиты (здесь поможет Nullifier Nullifier).",
-        "Не забывайте сейвить союзников, чтобы Bloodseeker Bloodseeker не мог за счёт их смертей восстанавливать себе здоровье."
+        "Не забывайте сейвить союзников, чтобы Bloodseeker не мог за счёт их смертей восстанавливать себе здоровье."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
     },
@@ -61,7 +61,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Naga Siren Naga Siren."
+          "reason": "Naga Siren."
         },
         {
           "hero": "Slark",
@@ -71,7 +71,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Slark Slark."
+          "reason": "Slark."
         },
         {
           "hero": "Tidehunter",
@@ -81,7 +81,7 @@
             "offlane",
             "support"
           ],
-          "reason": "«Тройки», такие как Tidehunter Tidehunter и Centaur Warrunner Centaur Warrunner, обладающие большим запасом здоровья и защитными способностями, будут испытывать минимум проблем против охотника за головами."
+          "reason": "«Тройки», такие как Tidehunter и Centaur Warrunner, обладающие большим запасом здоровья и защитными способностями, будут испытывать минимум проблем против охотника за головами."
         },
         {
           "hero": "Centaur Warrunner",
@@ -91,7 +91,7 @@
             "offlane",
             "support"
           ],
-          "reason": "«Тройки», такие как Tidehunter Tidehunter и Centaur Warrunner Centaur Warrunner, обладающие большим запасом здоровья и защитными способностями, будут испытывать минимум проблем против охотника за головами."
+          "reason": "«Тройки», такие как Tidehunter и Centaur Warrunner, обладающие большим запасом здоровья и защитными способностями, будут испытывать минимум проблем против охотника за головами."
         },
         {
           "hero": "Slardar",
@@ -101,14 +101,14 @@
             "offlane",
             "support"
           ],
-          "reason": "Slardar Slardar."
+          "reason": "Slardar."
         }
       ],
       "items": [],
       "tips": [
         "Не игнорируйте.",
         "В бою он может создать обманчивое ощущение, что он не является приоритетной целью.",
-        "Старайтесь выявлять и убивать Bounty Hunter Bounty Hunter как можно скорее."
+        "Старайтесь выявлять и убивать Bounty Hunter как можно скорее."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
     },
@@ -125,7 +125,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом, против Broodmother Broodmother хороши все герои, у которых есть много урона в AоE, например, Leshrac Leshrac, Pangolier Pangolier, Ember Spirit Ember Spirit."
+          "reason": "В целом, против Broodmother Broodmother хороши все герои, у которых есть много урона в AоE, например, Leshrac Leshrac, Pangolier, Ember Spirit."
         },
         {
           "hero": "Naga Siren",
@@ -135,7 +135,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Рассмотрим героев, контрящих Бруду, по позициям: Naga Siren Naga Siren."
+          "reason": "Рассмотрим героев, контрящих Бруду, по позициям: Naga Siren."
         },
         {
           "hero": "Axe",
@@ -155,7 +155,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Такие плотные герои, как Timbersaw Timbersaw, Tidehunter Tidehunter и Dragon Knight Dragon Knight, тоже достойно проявляют себя против Бруды, выдерживая её напор."
+          "reason": "Такие плотные герои, как Timbersaw, Tidehunter и Dragon Knight Dragon Knight, тоже достойно проявляют себя против Бруды, выдерживая её напор."
         },
         {
           "hero": "Timbersaw",
@@ -165,7 +165,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Такие плотные герои, как Timbersaw Timbersaw, Tidehunter Tidehunter и Dragon Knight Dragon Knight, тоже достойно проявляют себя против Бруды, выдерживая её напор."
+          "reason": "Такие плотные герои, как Timbersaw, Tidehunter и Dragon Knight Dragon Knight, тоже достойно проявляют себя против Бруды, выдерживая её напор."
         },
         {
           "hero": "Earthshaker",
@@ -175,7 +175,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Earthshaker Earthshaker."
+          "reason": "Earthshaker."
         },
         {
           "hero": "Kunkka",
@@ -195,7 +195,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Такие плотные герои, как Timbersaw Timbersaw, Tidehunter Tidehunter и Dragon Knight Dragon Knight, тоже достойно проявляют себя против Бруды, выдерживая её напор."
+          "reason": "Такие плотные герои, как Timbersaw, Tidehunter и Dragon Knight Dragon Knight, тоже достойно проявляют себя против Бруды, выдерживая её напор."
         }
       ],
       "items": [],
@@ -219,7 +219,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern Winter Wyvern, Tidehunter Tidehunter, Phantom Assassin Phantom Assassin, Spirit Breaker Spirit Breaker, Nature's Prophet Nature's Prophet, Spectre Spectre, Bounty Hunter Bounty Hunter и Enchantress Enchantress."
+          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern, Tidehunter, Phantom Assassin, Spirit Breaker, Nature's Prophet, Spectre, Bounty Hunter и Enchantress Enchantress."
         },
         {
           "hero": "Phantom Assassin",
@@ -229,7 +229,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern Winter Wyvern, Tidehunter Tidehunter, Phantom Assassin Phantom Assassin, Spirit Breaker Spirit Breaker, Nature's Prophet Nature's Prophet, Spectre Spectre, Bounty Hunter Bounty Hunter и Enchantress Enchantress."
+          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern, Tidehunter, Phantom Assassin, Spirit Breaker, Nature's Prophet, Spectre, Bounty Hunter и Enchantress Enchantress."
         },
         {
           "hero": "Phantom Lancer",
@@ -239,7 +239,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Среди контрпиков Clinkz Clinkz можно выделить следующих героев (указаны по позициям): Phantom Lancer Phantom Lancer."
+          "reason": "Среди контрпиков Clinkz Clinkz можно выделить следующих героев (указаны по позициям): Phantom Lancer."
         },
         {
           "hero": "Spectre",
@@ -249,7 +249,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern Winter Wyvern, Tidehunter Tidehunter, Phantom Assassin Phantom Assassin, Spirit Breaker Spirit Breaker, Nature's Prophet Nature's Prophet, Spectre Spectre, Bounty Hunter Bounty Hunter и Enchantress Enchantress."
+          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern, Tidehunter, Phantom Assassin, Spirit Breaker, Nature's Prophet, Spectre, Bounty Hunter и Enchantress Enchantress."
         },
         {
           "hero": "Tidehunter",
@@ -259,7 +259,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern Winter Wyvern, Tidehunter Tidehunter, Phantom Assassin Phantom Assassin, Spirit Breaker Spirit Breaker, Nature's Prophet Nature's Prophet, Spectre Spectre, Bounty Hunter Bounty Hunter и Enchantress Enchantress."
+          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern, Tidehunter, Phantom Assassin, Spirit Breaker, Nature's Prophet, Spectre, Bounty Hunter и Enchantress Enchantress."
         },
         {
           "hero": "Winter Wyvern",
@@ -269,7 +269,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern Winter Wyvern, Tidehunter Tidehunter, Phantom Assassin Phantom Assassin, Spirit Breaker Spirit Breaker, Nature's Prophet Nature's Prophet, Spectre Spectre, Bounty Hunter Bounty Hunter и Enchantress Enchantress."
+          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern, Tidehunter, Phantom Assassin, Spirit Breaker, Nature's Prophet, Spectre, Bounty Hunter и Enchantress Enchantress."
         },
         {
           "hero": "Treant Protector",
@@ -279,7 +279,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Treant Protector Treant Protector."
+          "reason": "Treant Protector."
         },
         {
           "hero": "Spirit Breaker",
@@ -289,7 +289,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern Winter Wyvern, Tidehunter Tidehunter, Phantom Assassin Phantom Assassin, Spirit Breaker Spirit Breaker, Nature's Prophet Nature's Prophet, Spectre Spectre, Bounty Hunter Bounty Hunter и Enchantress Enchantress."
+          "reason": "Если эти герои оказались в бане или их нет в вашем пуле, есть ещё множество альтернатив, например: Winter Wyvern, Tidehunter, Phantom Assassin, Spirit Breaker, Nature's Prophet, Spectre, Bounty Hunter и Enchantress Enchantress."
         },
         {
           "hero": "Slardar",
@@ -299,7 +299,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Slardar Slardar."
+          "reason": "Slardar."
         }
       ],
       "items": [],
@@ -323,7 +323,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Против Drow Ranger Drow Ranger хорошо зайдут и другие персонажи, способные быстро сокращать дистанцию, например: Slark Slark, Phantom Assassin Phantom Assassin, Riki Riki, Tusk Tusk и другие."
+          "reason": "Против Drow Ranger хорошо зайдут и другие персонажи, способные быстро сокращать дистанцию, например: Slark, Phantom Assassin, Riki Riki, Tusk и другие."
         },
         {
           "hero": "Riki",
@@ -333,7 +333,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Против Drow Ranger Drow Ranger хорошо зайдут и другие персонажи, способные быстро сокращать дистанцию, например: Slark Slark, Phantom Assassin Phantom Assassin, Riki Riki, Tusk Tusk и другие."
+          "reason": "Против Drow Ranger хорошо зайдут и другие персонажи, способные быстро сокращать дистанцию, например: Slark, Phantom Assassin, Riki Riki, Tusk и другие."
         },
         {
           "hero": "Slark",
@@ -343,7 +343,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Против Drow Ranger Drow Ranger хорошо зайдут и другие персонажи, способные быстро сокращать дистанцию, например: Slark Slark, Phantom Assassin Phantom Assassin, Riki Riki, Tusk Tusk и другие."
+          "reason": "Против Drow Ranger хорошо зайдут и другие персонажи, способные быстро сокращать дистанцию, например: Slark, Phantom Assassin, Riki Riki, Tusk и другие."
         },
         {
           "hero": "Sniper",
@@ -353,7 +353,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Контрпиком для Дровки является и Sniper Sniper, который, как и Tinker Tinker, оказывается сильнее в дистанционной битве."
+          "reason": "Контрпиком для Дровки является и Sniper, который, как и Tinker Tinker, оказывается сильнее в дистанционной битве."
         },
         {
           "hero": "Sven",
@@ -363,7 +363,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Для Дровки существует целый ряд контрпиков, однако мы выделим лишь некоторые из них, указав персонажей по позициям: Sven Sven."
+          "reason": "Для Дровки существует целый ряд контрпиков, однако мы выделим лишь некоторые из них, указав персонажей по позициям: Sven."
         },
         {
           "hero": "Centaur Warrunner",
@@ -373,7 +373,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Centaur Warrunner Centaur Warrunner."
+          "reason": "Centaur Warrunner."
         },
         {
           "hero": "Tusk",
@@ -383,7 +383,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Против Drow Ranger Drow Ranger хорошо зайдут и другие персонажи, способные быстро сокращать дистанцию, например: Slark Slark, Phantom Assassin Phantom Assassin, Riki Riki, Tusk Tusk и другие."
+          "reason": "Против Drow Ranger хорошо зайдут и другие персонажи, способные быстро сокращать дистанцию, например: Slark, Phantom Assassin, Riki Riki, Tusk и другие."
         },
         {
           "hero": "Clockwerk",
@@ -393,12 +393,12 @@
             "offlane",
             "support"
           ],
-          "reason": "Clockwerk Clockwerk."
+          "reason": "Clockwerk."
         }
       ],
       "items": [],
       "tips": [
-        "Заходить на «ХГ» против Drow Ranger Drow Ranger очень опасно, так как это лучшая позиция для неё.",
+        "Заходить на «ХГ» против Drow Ranger очень опасно, так как это лучшая позиция для неё.",
         "Старайтесь находить драки вне базы оппонента.",
         "Если же враг с «ХГ» не выходит, занимайте всю остальную карту и набирайте критическое преимущество, чтобы уверенно закончить игру в свою пользу."
       ],
@@ -407,7 +407,7 @@
     {
       "hero": "Ember Spirit",
       "category": "agility",
-      "summary": "Обычная роль для Ember Spirit Ember Spirit — это мид, на другие позиции его пикают очень редко.",
+      "summary": "Обычная роль для Ember Spirit — это мид, на другие позиции его пикают очень редко.",
       "counters": [
         {
           "hero": "Faceless Void",
@@ -417,7 +417,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Среди других контрпиков можно выделить таких персонажей, как Faceless Void Faceless Void, Silencer Silencer и Nyx Assassin Nyx Assassin."
+          "reason": "Среди других контрпиков можно выделить таких персонажей, как Faceless Void, Silencer и Nyx Assassin Nyx Assassin."
         },
         {
           "hero": "Lone Druid",
@@ -427,7 +427,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если вы хотите уничтожить Ember Spirit Ember Spirit на линии, вам могут подойти Shadow Fiend Shadow Fiend, Viper Viper, Outworld Destroyer Outworld Destroyer, Necrophos Necrophos и Lone Druid Lone Druid."
+          "reason": "Если вы хотите уничтожить Ember Spirit на линии, вам могут подойти Shadow Fiend, Viper, Outworld Destroyer, Necrophos и Lone Druid."
         },
         {
           "hero": "Shadow Fiend",
@@ -437,7 +437,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если вы хотите уничтожить Ember Spirit Ember Spirit на линии, вам могут подойти Shadow Fiend Shadow Fiend, Viper Viper, Outworld Destroyer Outworld Destroyer, Necrophos Necrophos и Lone Druid Lone Druid."
+          "reason": "Если вы хотите уничтожить Ember Spirit на линии, вам могут подойти Shadow Fiend, Viper, Outworld Destroyer, Necrophos и Lone Druid."
         },
         {
           "hero": "Slark",
@@ -447,7 +447,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Вот их список по позициям: Slark Slark."
+          "reason": "Вот их список по позициям: Slark."
         },
         {
           "hero": "Viper",
@@ -457,7 +457,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если вы хотите уничтожить Ember Spirit Ember Spirit на линии, вам могут подойти Shadow Fiend Shadow Fiend, Viper Viper, Outworld Destroyer Outworld Destroyer, Necrophos Necrophos и Lone Druid Lone Druid."
+          "reason": "Если вы хотите уничтожить Ember Spirit на линии, вам могут подойти Shadow Fiend, Viper, Outworld Destroyer, Necrophos и Lone Druid."
         },
         {
           "hero": "Necrophos",
@@ -467,7 +467,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если вы хотите уничтожить Ember Spirit Ember Spirit на линии, вам могут подойти Shadow Fiend Shadow Fiend, Viper Viper, Outworld Destroyer Outworld Destroyer, Necrophos Necrophos и Lone Druid Lone Druid."
+          "reason": "Если вы хотите уничтожить Ember Spirit на линии, вам могут подойти Shadow Fiend, Viper, Outworld Destroyer, Necrophos и Lone Druid."
         },
         {
           "hero": "Lion",
@@ -487,7 +487,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Среди других контрпиков можно выделить таких персонажей, как Faceless Void Faceless Void, Silencer Silencer и Nyx Assassin Nyx Assassin."
+          "reason": "Среди других контрпиков можно выделить таких персонажей, как Faceless Void, Silencer и Nyx Assassin Nyx Assassin."
         },
         {
           "hero": "Huskar",
@@ -507,14 +507,14 @@
             "offlane",
             "support"
           ],
-          "reason": "Legion Commander Legion Commander."
+          "reason": "Legion Commander."
         }
       ],
       "items": [],
       "tips": [
-        "Ember Spirit Ember Spirit отлично сплитит линии с помощью Fire Remnant Fire Remnant, поэтому в более поздней стадии вам понадобятся Boots of Travel Boots of Travel, чтобы отпушивать лайны.",
+        "Ember Spirit отлично сплитит линии с помощью Fire Remnant Fire Remnant, поэтому в более поздней стадии вам понадобятся Boots of Travel Boots of Travel, чтобы отпушивать лайны.",
         "Расфармленный Эмбер наносит огромное количество магического и физического урона, при этом поймать его не так просто.",
-        "В идеале Ember Spirit Ember Spirit быстро зафокусить с помощью всех дизейблов, которые у вас есть в команде, но не забывайте, что герой может вернуться в драку после байбека, если он оставил на месте замеса Fire Remnant Fire Remnant."
+        "В идеале Ember Spirit быстро зафокусить с помощью всех дизейблов, которые у вас есть в команде, но не забывайте, что герой может вернуться в драку после байбека, если он оставил на месте замеса Fire Remnant Fire Remnant."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
     },
@@ -531,7 +531,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Также подойдут персонажи на раннюю агрессию (Shadow Shaman Shadow Shaman, Death Prophet Death Prophet, Meepo Meepo и Riki Riki) и герои, которые не дадут Войду использовать свои способности (Doom Doom, Disruptor Disruptor, Silencer Silencer и Night Stalker Night Stalker)."
+          "reason": "Также подойдут персонажи на раннюю агрессию (Shadow Shaman, Death Prophet, Meepo Meepo и Riki Riki) и герои, которые не дадут Войду использовать свои способности (Doom Doom, Disruptor Disruptor, Silencer и Night Stalker)."
         },
         {
           "hero": "Riki",
@@ -541,7 +541,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Также подойдут персонажи на раннюю агрессию (Shadow Shaman Shadow Shaman, Death Prophet Death Prophet, Meepo Meepo и Riki Riki) и герои, которые не дадут Войду использовать свои способности (Doom Doom, Disruptor Disruptor, Silencer Silencer и Night Stalker Night Stalker)."
+          "reason": "Также подойдут персонажи на раннюю агрессию (Shadow Shaman, Death Prophet, Meepo Meepo и Riki Riki) и герои, которые не дадут Войду использовать свои способности (Doom Doom, Disruptor Disruptor, Silencer и Night Stalker)."
         },
         {
           "hero": "Vengeful Spirit",
@@ -551,7 +551,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Против Faceless Void Faceless Void хорошим выбором станут герои, спасающие своих союзников из-под Chronosphere Chronosphere (Oracle Oracle, Dazzle Dazzle, Outworld Destroyer Outworld Destroyer, Vengeful Spirit Vengeful Spirit)."
+          "reason": "Против Faceless Void хорошим выбором станут герои, спасающие своих союзников из-под Chronosphere Chronosphere (Oracle, Dazzle Dazzle, Outworld Destroyer, Vengeful Spirit)."
         },
         {
           "hero": "Axe",
@@ -571,7 +571,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Pudge Pudge."
+          "reason": "Pudge."
         },
         {
           "hero": "Silencer",
@@ -581,7 +581,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Также подойдут персонажи на раннюю агрессию (Shadow Shaman Shadow Shaman, Death Prophet Death Prophet, Meepo Meepo и Riki Riki) и герои, которые не дадут Войду использовать свои способности (Doom Doom, Disruptor Disruptor, Silencer Silencer и Night Stalker Night Stalker)."
+          "reason": "Также подойдут персонажи на раннюю агрессию (Shadow Shaman, Death Prophet, Meepo Meepo и Riki Riki) и герои, которые не дадут Войду использовать свои способности (Doom Doom, Disruptor Disruptor, Silencer и Night Stalker)."
         },
         {
           "hero": "Wraith King",
@@ -591,7 +591,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Для начала следует рассмотреть наиболее контрящих персонажей (указаны по ролям): Wraith King Wraith King."
+          "reason": "Для начала следует рассмотреть наиболее контрящих персонажей (указаны по ролям): Wraith King."
         },
         {
           "hero": "Doom",
@@ -601,7 +601,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Также подойдут персонажи на раннюю агрессию (Shadow Shaman Shadow Shaman, Death Prophet Death Prophet, Meepo Meepo и Riki Riki) и герои, которые не дадут Войду использовать свои способности (Doom Doom, Disruptor Disruptor, Silencer Silencer и Night Stalker Night Stalker)."
+          "reason": "Также подойдут персонажи на раннюю агрессию (Shadow Shaman, Death Prophet, Meepo Meepo и Riki Riki) и герои, которые не дадут Войду использовать свои способности (Doom Doom, Disruptor Disruptor, Silencer и Night Stalker)."
         }
       ],
       "items": [],
@@ -615,7 +615,7 @@
     {
       "hero": "Gyrocopter",
       "category": "agility",
-      "summary": "Керри — традиционная позиция Gyrocopter Gyrocopter, однако с течением времени игроки выявили высокую продуктивность данного героя на роли саппорта.",
+      "summary": "Керри — традиционная позиция Gyrocopter, однако с течением времени игроки выявили высокую продуктивность данного героя на роли саппорта.",
       "counters": [
         {
           "hero": "Faceless Void",
@@ -625,7 +625,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Выбрав этих персонажей в качестве контрпика против Gyrocopter Gyrocopter, вы существенно увеличите свои шансы на победу, одновременно усложнив ему жизнь: Faceless Void Faceless Void является одним из лучших контрпиков Gyrocopter Gyrocopter."
+          "reason": "Выбрав этих персонажей в качестве контрпика против Gyrocopter, вы существенно увеличите свои шансы на победу, одновременно усложнив ему жизнь: Faceless Void является одним из лучших контрпиков Gyrocopter."
         },
         {
           "hero": "Axe",
@@ -645,7 +645,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Таковыми, помимо предложенных, являются Pangolier Pangolier, Tinker Tinker и Legion Commander Legion Commander."
+          "reason": "Таковыми, помимо предложенных, являются Pangolier, Tinker Tinker и Legion Commander."
         },
         {
           "hero": "Clockwerk",
@@ -655,21 +655,21 @@
             "offlane",
             "support"
           ],
-          "reason": "Clockwerk Clockwerk."
+          "reason": "Clockwerk."
         }
       ],
       "items": [],
       "tips": [
         "Благодаря использованию Flak Cannon Flak Cannon ему удаётся фармить стаки нейтральных крипов, а также уничтожать несколько лесных лагерей одновременно.",
         "Старайтесь контролировать это, устанавливая глубокие Observer Ward Observer Ward и блокируя «споты» при помощи Sentry Ward Sentry Ward.",
-        "Существенным недостатком Gyrocopter Gyrocopter является отсутствие мобильности — именно благодаря этому аспекту ему трудно остаться незамеченным в драке, что упрощает возможность фокусировать его в ключевых сражениях."
+        "Существенным недостатком Gyrocopter является отсутствие мобильности — именно благодаря этому аспекту ему трудно остаться незамеченным в драке, что упрощает возможность фокусировать его в ключевых сражениях."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
     },
     {
       "hero": "Hoodwink",
       "category": "agility",
-      "summary": "Чаще всего Hoodwink Hoodwink выступает в роли саппорта, однако в редких случаях героя можно увидеть на кор-позициях.",
+      "summary": "Чаще всего Hoodwink выступает в роли саппорта, однако в редких случаях героя можно увидеть на кор-позициях.",
       "counters": [
         {
           "hero": "Juggernaut",
@@ -679,7 +679,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Вот несколько вариантов, указанных по ролям: Juggernaut Juggernaut и Lifestealer Lifestealer."
+          "reason": "Вот несколько вариантов, указанных по ролям: Juggernaut и Lifestealer."
         },
         {
           "hero": "Lifestealer",
@@ -689,7 +689,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Вот несколько вариантов, указанных по ролям: Juggernaut Juggernaut и Lifestealer Lifestealer."
+          "reason": "Вот несколько вариантов, указанных по ролям: Juggernaut и Lifestealer."
         },
         {
           "hero": "Lion",
@@ -699,7 +699,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Hoodwink Hoodwink тяжело придётся против героев с контролем: Lion Lion, Shadow Shaman Shadow Shaman, Bane Bane."
+          "reason": "Hoodwink тяжело придётся против героев с контролем: Lion Lion, Shadow Shaman, Bane Bane."
         },
         {
           "hero": "Timbersaw",
@@ -709,7 +709,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Timbersaw Timbersaw способен быстро сокращать дистанцию с «белкой» и легко её ловить, срубая все деревья на своём пути."
+          "reason": "Timbersaw способен быстро сокращать дистанцию с «белкой» и легко её ловить, срубая все деревья на своём пути."
         },
         {
           "hero": "Treant Protector",
@@ -719,7 +719,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Treant Protector Treant Protector так же, как и Hoodwink Hoodwink, способен перемещаться между деревьев, что упрощает игру."
+          "reason": "Treant Protector так же, как и Hoodwink, способен перемещаться между деревьев, что упрощает игру."
         },
         {
           "hero": "Spirit Breaker",
@@ -729,7 +729,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Spirit Breaker Spirit Breaker."
+          "reason": "Spirit Breaker."
         }
       ],
       "items": [],
@@ -743,7 +743,7 @@
     {
       "hero": "Juggernaut",
       "category": "agility",
-      "summary": "Как и все керри, Juggernaut Juggernaut стремится как можно быстрее зарабатывать золото, чтобы повысить общую ценность и, набрав критическую массу, закончить игру.",
+      "summary": "Как и все керри, Juggernaut стремится как можно быстрее зарабатывать золото, чтобы повысить общую ценность и, набрав критическую массу, закончить игру.",
       "counters": [
         {
           "hero": "Phantom Assassin",
@@ -753,7 +753,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Прожатие Blur Blur Phantom Assassin Phantom Assassin закончит ультимейт, если рядом нет других целей."
+          "reason": "Прожатие Blur Blur Phantom Assassin закончит ультимейт, если рядом нет других целей."
         },
         {
           "hero": "Sniper",
@@ -763,7 +763,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Герои с большой дальностью атаки вроде Sniper Sniper или высокой мобильностью вроде Windranger Windranger могут разбить источник лечения даже в тылу построений врага."
+          "reason": "Герои с большой дальностью атаки вроде Sniper или высокой мобильностью вроде Windranger могут разбить источник лечения даже в тылу построений врага."
         },
         {
           "hero": "Bristleback",
@@ -773,7 +773,7 @@
             "offlane",
             "support"
           ],
-          "reason": "А вот его врожденная способность, наносящая дополнительный урон целям, повернутым лицом к герою, наталкивает на актуальность Bristleback Bristleback — этот персонаж может сражаться, находясь спиной к противнику."
+          "reason": "А вот его врожденная способность, наносящая дополнительный урон целям, повернутым лицом к герою, наталкивает на актуальность Bristleback — этот персонаж может сражаться, находясь спиной к противнику."
         },
         {
           "hero": "Necrophos",
@@ -783,7 +783,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Призрачная форма (Decrepify Decrepify Pugna Pugna или Ghost Shroud Ghost Shroud Necrophos Necrophos) или 100% уклонения (Windrun Windrun Windranger Windranger) позволяют впитывать прыжки и не получать урон."
+          "reason": "Призрачная форма (Decrepify Decrepify Pugna Pugna или Ghost Shroud Ghost Shroud Necrophos) или 100% уклонения (Windrun Windrun Windranger) позволяют впитывать прыжки и не получать урон."
         },
         {
           "hero": "Windranger",
@@ -793,12 +793,12 @@
             "offlane",
             "support"
           ],
-          "reason": "Призрачная форма (Decrepify Decrepify Pugna Pugna или Ghost Shroud Ghost Shroud Necrophos Necrophos) или 100% уклонения (Windrun Windrun Windranger Windranger) позволяют впитывать прыжки и не получать урон."
+          "reason": "Призрачная форма (Decrepify Decrepify Pugna Pugna или Ghost Shroud Ghost Shroud Necrophos) или 100% уклонения (Windrun Windrun Windranger) позволяют впитывать прыжки и не получать урон."
         }
       ],
       "items": [],
       "tips": [
-        "Если Juggernaut Juggernaut купил Aghanim's Scepter Aghanim's Scepter, удостоверьтесь, что используется Omnislash Omnislash, а не Swiftslash Swiftslash, перед тем, как тратить важный ресурс на спасение.",
+        "Если Juggernaut купил Aghanim's Scepter Aghanim's Scepter, удостоверьтесь, что используется Omnislash Omnislash, а не Swiftslash Swiftslash, перед тем, как тратить важный ресурс на спасение.",
         "Ну и самое главное — нужно понимать, что сколько бы контрпиков не было, герой может просто перебить всех «с руки» и без идеальной реализации способностей.",
         "Поэтому следите, чтобы Джаггер не отрывался от вашего керри по фарму."
       ],
@@ -817,7 +817,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Faceless Void Faceless Void: Если в Chronosphere Chronosphere есть урон — Kez Kez умрет."
+          "reason": "Faceless Void: Если в Chronosphere Chronosphere есть урон — Kez Kez умрет."
         },
         {
           "hero": "Slark",
@@ -827,7 +827,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Slark Slark — один из немногих героев, которые могут размениваться ударами с Kez Kez."
+          "reason": "Slark — один из немногих героев, которые могут размениваться ударами с Kez Kez."
         },
         {
           "hero": "Primal Beast",
@@ -837,7 +837,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Primal Beast Primal Beast: Pulverize Pulverize прервет Raptor Dance Raptor Dance и помешает команде противника спасти важную цель — все попытаются держаться подальше от места, по которому зверь будет колотить казурем."
+          "reason": "Primal Beast: Pulverize Pulverize прервет Raptor Dance Raptor Dance и помешает команде противника спасти важную цель — все попытаются держаться подальше от места, по которому зверь будет колотить казурем."
         }
       ],
       "items": [],
@@ -861,7 +861,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Рассмотрим героев, контрящих Лон Друида, по позициям: Lifestealer Lifestealer."
+          "reason": "Рассмотрим героев, контрящих Лон Друида, по позициям: Lifestealer."
         },
         {
           "hero": "Lina",
@@ -871,7 +871,7 @@
             "offlane",
             "support"
           ],
-          "reason": "На центральной линии Друид стоит практически против любого героя, однако именно Lina Lina будет чувствовать себя наиболее комфортно."
+          "reason": "На центральной линии Друид стоит практически против любого героя, однако именно Lina будет чувствовать себя наиболее комфортно."
         },
         {
           "hero": "Winter Wyvern",
@@ -881,7 +881,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Помимо предложенных ранее персонажей, хорошим выбором станет Winter Wyvern Winter Wyvern, которая может в одиночку убить настоящего Lone Druid Lone Druid при помощи Winter's Curse Winter's Curse."
+          "reason": "Помимо предложенных ранее персонажей, хорошим выбором станет Winter Wyvern, которая может в одиночку убить настоящего Lone Druid при помощи Winter's Curse Winter's Curse."
         },
         {
           "hero": "Slardar",
@@ -891,7 +891,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Slardar Slardar."
+          "reason": "Slardar."
         },
         {
           "hero": "Huskar",
@@ -907,7 +907,7 @@
       "items": [],
       "tips": [
         "Медведь зачастую выбирает одиночные цели, поэтому попытайтесь уничтожить всю вражескую команду, а лишь затем переключиться на Друида.",
-        "Самое главное — для того, чтобы одержать победу над сильным игроком на Lone Druid Lone Druid, следует играть командно.",
+        "Самое главное — для того, чтобы одержать победу над сильным игроком на Lone Druid, следует играть командно.",
         "Сплотитесь со своими тиммейтами — именно это поможет вам вести хорошую коммуникацию, которая не позволит подставиться под медведя поодиночке."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
@@ -925,7 +925,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Другие контрпики для Luna Luna: Doom Doom и Ancient Apparition Ancient Apparition (не позволяют Luna Luna восстанавливать здоровье с помощью Satanic Satanic), Drow Ranger Drow Ranger и Sniper Sniper (не дают Луне подойти к себе, убивая её с дистанции), а также Grimstroke Grimstroke с Aghanim's Scepter Aghanim's Scepter, который тоже может создать сильную иллюзию вражеской Luna Luna."
+          "reason": "Другие контрпики для Luna: Doom Doom и Ancient Apparition (не позволяют Luna восстанавливать здоровье с помощью Satanic Satanic), Drow Ranger и Sniper (не дают Луне подойти к себе, убивая её с дистанции), а также Grimstroke Grimstroke с Aghanim's Scepter Aghanim's Scepter, который тоже может создать сильную иллюзию вражеской Luna."
         },
         {
           "hero": "Sniper",
@@ -935,7 +935,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Другие контрпики для Luna Luna: Doom Doom и Ancient Apparition Ancient Apparition (не позволяют Luna Luna восстанавливать здоровье с помощью Satanic Satanic), Drow Ranger Drow Ranger и Sniper Sniper (не дают Луне подойти к себе, убивая её с дистанции), а также Grimstroke Grimstroke с Aghanim's Scepter Aghanim's Scepter, который тоже может создать сильную иллюзию вражеской Luna Luna."
+          "reason": "Другие контрпики для Luna: Doom Doom и Ancient Apparition (не позволяют Luna восстанавливать здоровье с помощью Satanic Satanic), Drow Ranger и Sniper (не дают Луне подойти к себе, убивая её с дистанции), а также Grimstroke Grimstroke с Aghanim's Scepter Aghanim's Scepter, который тоже может создать сильную иллюзию вражеской Luna."
         },
         {
           "hero": "Terrorblade",
@@ -945,7 +945,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Рассмотрим несколько вариантов контрпиков для Luna Luna (герои указаны по позициям): Terrorblade Terrorblade."
+          "reason": "Рассмотрим несколько вариантов контрпиков для Luna (герои указаны по позициям): Terrorblade Terrorblade."
         },
         {
           "hero": "Viper",
@@ -955,7 +955,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Viper Viper."
+          "reason": "Viper."
         },
         {
           "hero": "Ancient Apparition",
@@ -965,7 +965,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Другие контрпики для Luna Luna: Doom Doom и Ancient Apparition Ancient Apparition (не позволяют Luna Luna восстанавливать здоровье с помощью Satanic Satanic), Drow Ranger Drow Ranger и Sniper Sniper (не дают Луне подойти к себе, убивая её с дистанции), а также Grimstroke Grimstroke с Aghanim's Scepter Aghanim's Scepter, который тоже может создать сильную иллюзию вражеской Luna Luna."
+          "reason": "Другие контрпики для Luna: Doom Doom и Ancient Apparition (не позволяют Luna восстанавливать здоровье с помощью Satanic Satanic), Drow Ranger и Sniper (не дают Луне подойти к себе, убивая её с дистанции), а также Grimstroke Grimstroke с Aghanim's Scepter Aghanim's Scepter, который тоже может создать сильную иллюзию вражеской Luna."
         },
         {
           "hero": "Doom",
@@ -975,13 +975,13 @@
             "offlane",
             "support"
           ],
-          "reason": "Другие контрпики для Luna Luna: Doom Doom и Ancient Apparition Ancient Apparition (не позволяют Luna Luna восстанавливать здоровье с помощью Satanic Satanic), Drow Ranger Drow Ranger и Sniper Sniper (не дают Луне подойти к себе, убивая её с дистанции), а также Grimstroke Grimstroke с Aghanim's Scepter Aghanim's Scepter, который тоже может создать сильную иллюзию вражеской Luna Luna."
+          "reason": "Другие контрпики для Luna: Doom Doom и Ancient Apparition (не позволяют Luna восстанавливать здоровье с помощью Satanic Satanic), Drow Ranger и Sniper (не дают Луне подойти к себе, убивая её с дистанции), а также Grimstroke Grimstroke с Aghanim's Scepter Aghanim's Scepter, который тоже может создать сильную иллюзию вражеской Luna."
         }
       ],
       "items": [],
       "tips": [
-        "Ваша задача — забрать их самим, лишив Luna Luna дополнительных денег.",
-        "В лейте Luna Luna — страшный соперник, особенно если она дойдёт до вашей базы, так как с помощью Moon Glaives Moon Glaives герой в считанные секунды снесёт все строения, успевая параллельно убивать ваших героев.",
+        "Ваша задача — забрать их самим, лишив Luna дополнительных денег.",
+        "В лейте Luna — страшный соперник, особенно если она дойдёт до вашей базы, так как с помощью Moon Glaives Moon Glaives герой в считанные секунды снесёт все строения, успевая параллельно убивать ваших героев.",
         "Лучше всего драки против Луны принимать вне своего «ХГ» или хотя бы до сноса тир-3 башни."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
@@ -999,7 +999,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Из керри можно выделить еще и Slark Slark, который безнаказанно ворует «статы» Medusa Medusa под Shadow Dance Shadow Dance и Depth Shroud Depth Shroud, а также часто приобретает Diffusal Blade Diffusal Blade."
+          "reason": "Из керри можно выделить еще и Slark, который безнаказанно ворует «статы» Medusa под Shadow Dance Shadow Dance и Depth Shroud Depth Shroud, а также часто приобретает Diffusal Blade Diffusal Blade."
         },
         {
           "hero": "Sniper",
@@ -1009,7 +1009,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Sniper Sniper — хороший контрпик на мид."
+          "reason": "Sniper — хороший контрпик на мид."
         },
         {
           "hero": "Axe",
@@ -1019,7 +1019,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Отметим «тройки», которые не дают Medusa Medusa спокойно стоять на лайне и мешают по игре — Sand King Sand King, Centaur Warrunner Centaur Warrunner, Underlord Underlord и Axe Axe."
+          "reason": "Отметим «тройки», которые не дают Medusa спокойно стоять на лайне и мешают по игре — Sand King Sand King, Centaur Warrunner, Underlord и Axe Axe."
         },
         {
           "hero": "Lion",
@@ -1029,7 +1029,7 @@
             "offlane",
             "support"
           ],
-          "reason": "E.M.P.); Lion Lion (Mana Drain Mana Drain); Outworld Destroyer Outworld Destroyer (Astral Imprisonment Astral Imprisonment); Bane Bane остановит Медузу в «файте» с помощью Fiend's Grip Fiend's Grip и выжжет большое количество маны."
+          "reason": "E.M.P.); Lion Lion (Mana Drain Mana Drain); Outworld Destroyer (Astral Imprisonment Astral Imprisonment); Bane Bane остановит Медузу в «файте» с помощью Fiend's Grip Fiend's Grip и выжжет большое количество маны."
         },
         {
           "hero": "Underlord",
@@ -1039,7 +1039,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Отметим «тройки», которые не дают Medusa Medusa спокойно стоять на лайне и мешают по игре — Sand King Sand King, Centaur Warrunner Centaur Warrunner, Underlord Underlord и Axe Axe."
+          "reason": "Отметим «тройки», которые не дают Medusa спокойно стоять на лайне и мешают по игре — Sand King Sand King, Centaur Warrunner, Underlord и Axe Axe."
         },
         {
           "hero": "Centaur Warrunner",
@@ -1049,14 +1049,14 @@
             "offlane",
             "support"
           ],
-          "reason": "Отметим «тройки», которые не дают Medusa Medusa спокойно стоять на лайне и мешают по игре — Sand King Sand King, Centaur Warrunner Centaur Warrunner, Underlord Underlord и Axe Axe."
+          "reason": "Отметим «тройки», которые не дают Medusa спокойно стоять на лайне и мешают по игре — Sand King Sand King, Centaur Warrunner, Underlord и Axe Axe."
         }
       ],
       "items": [],
       "tips": [
         "Удерживайте контроль над этой точкой на карте с помощью Observer Ward Observer Ward и Sentry Ward Sentry Ward.",
         "Следите за количеством маны Медузы, чтобы знать, когда герой уязвим.",
-        "Без Mana Shield Mana Shield убить Medusa Medusa не составит труда."
+        "Без Mana Shield Mana Shield убить Medusa не составит труда."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
     },
@@ -1073,7 +1073,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Перечислим некоторых из них: Juggernaut Juggernaut."
+          "reason": "Перечислим некоторых из них: Juggernaut."
         },
         {
           "hero": "Ursa",
@@ -1083,7 +1083,7 @@
             "offlane",
             "support"
           ],
-          "reason": "На керри-позицию можно использовать Sven Sven или Ursa Ursa."
+          "reason": "На керри-позицию можно использовать Sven или Ursa."
         },
         {
           "hero": "Axe",
@@ -1093,7 +1093,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В оффлейне всегда был хорош Axe Axe, а на позиции саппорта великолепно себя проявляет Winter Wyvern Winter Wyvern."
+          "reason": "В оффлейне всегда был хорош Axe Axe, а на позиции саппорта великолепно себя проявляет Winter Wyvern."
         },
         {
           "hero": "Sven",
@@ -1103,7 +1103,7 @@
             "offlane",
             "support"
           ],
-          "reason": "На керри-позицию можно использовать Sven Sven или Ursa Ursa."
+          "reason": "На керри-позицию можно использовать Sven или Ursa."
         },
         {
           "hero": "Earthshaker",
@@ -1113,7 +1113,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Earthshaker Earthshaker."
+          "reason": "Earthshaker."
         },
         {
           "hero": "Winter Wyvern",
@@ -1123,7 +1123,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В оффлейне всегда был хорош Axe Axe, а на позиции саппорта великолепно себя проявляет Winter Wyvern Winter Wyvern."
+          "reason": "В оффлейне всегда был хорош Axe Axe, а на позиции саппорта великолепно себя проявляет Winter Wyvern."
         },
         {
           "hero": "Kunkka",
@@ -1143,7 +1143,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Legion Commander Legion Commander."
+          "reason": "Legion Commander."
         }
       ],
       "items": [],
@@ -1167,7 +1167,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Отметим также Slardar Slardar и Bounty Hunter Bounty Hunter — Mirana Mirana и ее союзники не смогут скрыться в «ульте»."
+          "reason": "Отметим также Slardar и Bounty Hunter — Mirana и ее союзники не смогут скрыться в «ульте»."
         },
         {
           "hero": "Drow Ranger",
@@ -1177,7 +1177,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Подытожив, выделим и других персонажей на контрпик Мираны, которые накладывают на врагов безмолвие — Riki Riki, Silencer Silencer и Drow Ranger Drow Ranger (Gust Gust раскроет вражескую команду под Moonlight Shadow Moonlight Shadow)."
+          "reason": "Подытожив, выделим и других персонажей на контрпик Мираны, которые накладывают на врагов безмолвие — Riki Riki, Silencer и Drow Ranger (Gust Gust раскроет вражескую команду под Moonlight Shadow Moonlight Shadow)."
         },
         {
           "hero": "Meepo",
@@ -1197,7 +1197,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Подытожив, выделим и других персонажей на контрпик Мираны, которые накладывают на врагов безмолвие — Riki Riki, Silencer Silencer и Drow Ranger Drow Ranger (Gust Gust раскроет вражескую команду под Moonlight Shadow Moonlight Shadow)."
+          "reason": "Подытожив, выделим и других персонажей на контрпик Мираны, которые накладывают на врагов безмолвие — Riki Riki, Silencer и Drow Ranger (Gust Gust раскроет вражескую команду под Moonlight Shadow Moonlight Shadow)."
         },
         {
           "hero": "Slark",
@@ -1207,7 +1207,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Учитывая эти наиболее мешающие скиллы при игре против Mirana Mirana, составим список контрпиков для каждой роли: Slark Slark."
+          "reason": "Учитывая эти наиболее мешающие скиллы при игре против Mirana, составим список контрпиков для каждой роли: Slark."
         },
         {
           "hero": "Vengeful Spirit",
@@ -1217,7 +1217,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Мирана имеет немного здоровья, поэтому она боится и героев с контролем — Lion Lion, Shadow Shaman Shadow Shaman, Vengeful Spirit Vengeful Spirit и других."
+          "reason": "Мирана имеет немного здоровья, поэтому она боится и героев с контролем — Lion Lion, Shadow Shaman, Vengeful Spirit и других."
         },
         {
           "hero": "Skywrath Mage",
@@ -1237,7 +1237,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Мирана имеет немного здоровья, поэтому она боится и героев с контролем — Lion Lion, Shadow Shaman Shadow Shaman, Vengeful Spirit Vengeful Spirit и других."
+          "reason": "Мирана имеет немного здоровья, поэтому она боится и героев с контролем — Lion Lion, Shadow Shaman, Vengeful Spirit и других."
         },
         {
           "hero": "Silencer",
@@ -1247,7 +1247,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Подытожив, выделим и других персонажей на контрпик Мираны, которые накладывают на врагов безмолвие — Riki Riki, Silencer Silencer и Drow Ranger Drow Ranger (Gust Gust раскроет вражескую команду под Moonlight Shadow Moonlight Shadow)."
+          "reason": "Подытожив, выделим и других персонажей на контрпик Мираны, которые накладывают на врагов безмолвие — Riki Riki, Silencer и Drow Ranger (Gust Gust раскроет вражескую команду под Moonlight Shadow Moonlight Shadow)."
         },
         {
           "hero": "Slardar",
@@ -1257,7 +1257,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Отметим также Slardar Slardar и Bounty Hunter Bounty Hunter — Mirana Mirana и ее союзники не смогут скрыться в «ульте»."
+          "reason": "Отметим также Slardar и Bounty Hunter — Mirana и ее союзники не смогут скрыться в «ульте»."
         }
       ],
       "items": [],
@@ -1281,7 +1281,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Хорошо помогут и персонажи, накладывающие эффект «Истощение» — Viper Viper, Hoodwink Hoodwink, Doom Doom и другие."
+          "reason": "Хорошо помогут и персонажи, накладывающие эффект «Истощение» — Viper, Hoodwink, Doom Doom и другие."
         },
         {
           "hero": "Vengeful Spirit",
@@ -1291,7 +1291,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Еще одна проблема — Wukong's Command Wukong's Command, из которой важно спастись или помочь тиммейту, а лучше прервать, поэтому можно также обратить внимание на следующих героев — Vengeful Spirit Vengeful Spirit, Phoenix Phoenix, Queen of Pain Queen of Pain, Weaver Weaver."
+          "reason": "Еще одна проблема — Wukong's Command Wukong's Command, из которой важно спастись или помочь тиммейту, а лучше прервать, поэтому можно также обратить внимание на следующих героев — Vengeful Spirit, Phoenix Phoenix, Queen of Pain Queen of Pain, Weaver."
         },
         {
           "hero": "Viper",
@@ -1301,7 +1301,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Хорошо помогут и персонажи, накладывающие эффект «Истощение» — Viper Viper, Hoodwink Hoodwink, Doom Doom и другие."
+          "reason": "Хорошо помогут и персонажи, накладывающие эффект «Истощение» — Viper, Hoodwink, Doom Doom и другие."
         },
         {
           "hero": "Weaver",
@@ -1311,7 +1311,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Еще одна проблема — Wukong's Command Wukong's Command, из которой важно спастись или помочь тиммейту, а лучше прервать, поэтому можно также обратить внимание на следующих героев — Vengeful Spirit Vengeful Spirit, Phoenix Phoenix, Queen of Pain Queen of Pain, Weaver Weaver."
+          "reason": "Еще одна проблема — Wukong's Command Wukong's Command, из которой важно спастись или помочь тиммейту, а лучше прервать, поэтому можно также обратить внимание на следующих героев — Vengeful Spirit, Phoenix Phoenix, Queen of Pain Queen of Pain, Weaver."
         },
         {
           "hero": "Ancient Apparition",
@@ -1321,7 +1321,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Ancient Apparition Ancient Apparition."
+          "reason": "Ancient Apparition."
         },
         {
           "hero": "Windranger",
@@ -1331,7 +1331,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Windranger Windranger."
+          "reason": "Windranger."
         },
         {
           "hero": "Phoenix",
@@ -1341,7 +1341,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Еще одна проблема — Wukong's Command Wukong's Command, из которой важно спастись или помочь тиммейту, а лучше прервать, поэтому можно также обратить внимание на следующих героев — Vengeful Spirit Vengeful Spirit, Phoenix Phoenix, Queen of Pain Queen of Pain, Weaver Weaver."
+          "reason": "Еще одна проблема — Wukong's Command Wukong's Command, из которой важно спастись или помочь тиммейту, а лучше прервать, поэтому можно также обратить внимание на следующих героев — Vengeful Spirit, Phoenix Phoenix, Queen of Pain Queen of Pain, Weaver."
         },
         {
           "hero": "Doom",
@@ -1351,7 +1351,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Хорошо помогут и персонажи, накладывающие эффект «Истощение» — Viper Viper, Hoodwink Hoodwink, Doom Doom и другие."
+          "reason": "Хорошо помогут и персонажи, накладывающие эффект «Истощение» — Viper, Hoodwink, Doom Doom и другие."
         }
       ],
       "items": [],
@@ -1365,7 +1365,7 @@
     {
       "hero": "Morphling",
       "category": "agility",
-      "summary": "Обычно Morphling Morphling используется игроками на первой позиции, однако в редких случаях героя берут в мид.",
+      "summary": "Обычно Morphling используется игроками на первой позиции, однако в редких случаях героя берут в мид.",
       "counters": [
         {
           "hero": "Axe",
@@ -1385,7 +1385,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Ancient Apparition Ancient Apparition."
+          "reason": "Ancient Apparition."
         },
         {
           "hero": "Lina",
@@ -1395,7 +1395,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Lina Lina."
+          "reason": "Lina."
         },
         {
           "hero": "Skywrath Mage",
@@ -1405,7 +1405,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Кроме этого, к контрпикам для Morphling Morphling можно отнести тех, кто способен его «забёрстить» (примеры: Lion Lion, Skywrath Mage Skywrath Mage, Nyx Assassin Nyx Assassin и другие), а также тех, кто может его моментально «застанить» или «засайленсить» (Shadow Shaman Shadow Shaman, Earth Spirit Earth Spirit, Puck Puck и тому подобные)."
+          "reason": "Кроме этого, к контрпикам для Morphling можно отнести тех, кто способен его «забёрстить» (примеры: Lion Lion, Skywrath Mage Skywrath Mage, Nyx Assassin Nyx Assassin и другие), а также тех, кто может его моментально «застанить» или «засайленсить» (Shadow Shaman, Earth Spirit, Puck Puck и тому подобные)."
         },
         {
           "hero": "Lion",
@@ -1415,7 +1415,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Кроме этого, к контрпикам для Morphling Morphling можно отнести тех, кто способен его «забёрстить» (примеры: Lion Lion, Skywrath Mage Skywrath Mage, Nyx Assassin Nyx Assassin и другие), а также тех, кто может его моментально «застанить» или «засайленсить» (Shadow Shaman Shadow Shaman, Earth Spirit Earth Spirit, Puck Puck и тому подобные)."
+          "reason": "Кроме этого, к контрпикам для Morphling можно отнести тех, кто способен его «забёрстить» (примеры: Lion Lion, Skywrath Mage Skywrath Mage, Nyx Assassin Nyx Assassin и другие), а также тех, кто может его моментально «застанить» или «засайленсить» (Shadow Shaman, Earth Spirit, Puck Puck и тому подобные)."
         },
         {
           "hero": "Earthshaker",
@@ -1425,7 +1425,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если у вас в команде есть персонаж, способности которого хорошо сочетаются с Морфом (например, Earthshaker Earthshaker и его Enchant Totem Enchant Totem), в драке ему лучше не показываться до тех пор, пока он не увидит Morphling Morphling, использовавшего свой Morph Morph на другого героя."
+          "reason": "Если у вас в команде есть персонаж, способности которого хорошо сочетаются с Морфом (например, Earthshaker и его Enchant Totem Enchant Totem), в драке ему лучше не показываться до тех пор, пока он не увидит Morphling, использовавшего свой Morph Morph на другого героя."
         },
         {
           "hero": "Earth Spirit",
@@ -1435,21 +1435,21 @@
             "offlane",
             "support"
           ],
-          "reason": "Кроме этого, к контрпикам для Morphling Morphling можно отнести тех, кто способен его «забёрстить» (примеры: Lion Lion, Skywrath Mage Skywrath Mage, Nyx Assassin Nyx Assassin и другие), а также тех, кто может его моментально «застанить» или «засайленсить» (Shadow Shaman Shadow Shaman, Earth Spirit Earth Spirit, Puck Puck и тому подобные)."
+          "reason": "Кроме этого, к контрпикам для Morphling можно отнести тех, кто способен его «забёрстить» (примеры: Lion Lion, Skywrath Mage Skywrath Mage, Nyx Assassin Nyx Assassin и другие), а также тех, кто может его моментально «застанить» или «засайленсить» (Shadow Shaman, Earth Spirit, Puck Puck и тому подобные)."
         }
       ],
       "items": [],
       "tips": [
         "Если Морфу всё же удалось это сделать, оцените свою позицию и, если ситуация опасная, отступите.",
-        "Morph Morph позволяет Morphling Morphling превратиться в любого героя из команды соперника.",
-        "Если у вас в команде есть персонаж, способности которого хорошо сочетаются с Морфом (например, Earthshaker Earthshaker и его Enchant Totem Enchant Totem), в драке ему лучше не показываться до тех пор, пока он не увидит Morphling Morphling, использовавшего свой Morph Morph на другого героя."
+        "Morph Morph позволяет Morphling превратиться в любого героя из команды соперника.",
+        "Если у вас в команде есть персонаж, способности которого хорошо сочетаются с Морфом (например, Earthshaker и его Enchant Totem Enchant Totem), в драке ему лучше не показываться до тех пор, пока он не увидит Morphling, использовавшего свой Morph Morph на другого героя."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
     },
     {
       "hero": "Naga Siren",
       "category": "agility",
-      "summary": "За время развития игры Naga Siren Naga Siren зарекомендовала себя как универсальный герой, использующийся практически на каждой позиции, однако зачастую её выбирают именно на керри.",
+      "summary": "За время развития игры Naga Siren зарекомендовала себя как универсальный герой, использующийся практически на каждой позиции, однако зачастую её выбирают именно на керри.",
       "counters": [
         {
           "hero": "Mirana",
@@ -1459,7 +1459,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Помимо них, хорошими вариантами против Naga Siren Naga Siren могут стать Lion Lion, стирающий все иллюзии благодаря способностям Hex Hex и Mana Drain Mana Drain, а также Mirana Mirana, способная при помощи Sacred Arrow Sacred Arrow прерывать традиционную телепортацию Наги во время использования Song of the Siren Song of the Siren."
+          "reason": "Помимо них, хорошими вариантами против Naga Siren могут стать Lion Lion, стирающий все иллюзии благодаря способностям Hex Hex и Mana Drain Mana Drain, а также Mirana, способная при помощи Sacred Arrow Sacred Arrow прерывать традиционную телепортацию Наги во время использования Song of the Siren Song of the Siren."
         },
         {
           "hero": "Lion",
@@ -1469,7 +1469,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Помимо них, хорошими вариантами против Naga Siren Naga Siren могут стать Lion Lion, стирающий все иллюзии благодаря способностям Hex Hex и Mana Drain Mana Drain, а также Mirana Mirana, способная при помощи Sacred Arrow Sacred Arrow прерывать традиционную телепортацию Наги во время использования Song of the Siren Song of the Siren."
+          "reason": "Помимо них, хорошими вариантами против Naga Siren могут стать Lion Lion, стирающий все иллюзии благодаря способностям Hex Hex и Mana Drain Mana Drain, а также Mirana, способная при помощи Sacred Arrow Sacred Arrow прерывать традиционную телепортацию Наги во время использования Song of the Siren Song of the Siren."
         },
         {
           "hero": "Sven",
@@ -1479,7 +1479,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Sven Sven часто выбирают против иллюзионистов."
+          "reason": "Sven часто выбирают против иллюзионистов."
         },
         {
           "hero": "Earthshaker",
@@ -1489,13 +1489,13 @@
             "offlane",
             "support"
           ],
-          "reason": "Рассмотрим некоторые из них: Earthshaker Earthshaker."
+          "reason": "Рассмотрим некоторые из них: Earthshaker."
         }
       ],
       "items": [],
       "tips": [
         "Старайтесь либо ловить Сирену, в одиночку фармящую в лесу, либо навязывайте драки против оставшихся вражеских героев, имея численное преимущество.",
-        "Всегда нужно понимать, что Naga Siren Naga Siren — уязвимый герой, если напасть на неё внезапно.",
+        "Всегда нужно понимать, что Naga Siren — уязвимый герой, если напасть на неё внезапно.",
         "На ней не хочется покупать Black King Bar Black King Bar, поэтому Scythe of Vyse Scythe of Vyse и Bloodthorn Bloodthorn будут являться ключевыми артефактами против Сирены."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
@@ -1513,7 +1513,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Slark Slark."
+          "reason": "Slark."
         },
         {
           "hero": "Viper",
@@ -1523,7 +1523,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Viper Viper."
+          "reason": "Viper."
         },
         {
           "hero": "Axe",
@@ -1543,7 +1543,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Lina Lina будет хорошим контрпиком Phantom Assassin Phantom Assassin на любой стадии игры."
+          "reason": "Lina будет хорошим контрпиком Phantom Assassin на любой стадии игры."
         },
         {
           "hero": "Lion",
@@ -1553,14 +1553,14 @@
             "offlane",
             "support"
           ],
-          "reason": "Вот несколько вариантов: Tinker Tinker, Lion Lion, Pugna Pugna, Zeus Zeus."
+          "reason": "Вот несколько вариантов: Tinker Tinker, Lion Lion, Pugna Pugna, Zeus."
         }
       ],
       "items": [],
       "tips": [
         "Поэтому следует внимательно следить за своим позиционированием в драке и стараться не играть в одиночку.",
         "Благодаря использованию Blur Blur персонаж перестаёт отображаться на миникарте.",
-        "Из-за этой особенности Phantom Assassin Phantom Assassin может безопасно сплит-пушить и фармить в любой точке карты, поэтому следует внимательно следить внезапной смертью линейных крипов и ловить Фантомку на фарме."
+        "Из-за этой особенности Phantom Assassin может безопасно сплит-пушить и фармить в любой точке карты, поэтому следует внимательно следить внезапной смертью линейных крипов и ловить Фантомку на фарме."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
     },
@@ -1577,7 +1577,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В дополнении к этому стоит отметить героев, имеющих много урона по области (Leshrac Leshrac, Sand King Sand King, Jakiro Jakiro), и тех, кто может поймать ПЛа (Faceless Void Faceless Void, Legion Commander Legion Commander, Axe Axe)."
+          "reason": "В дополнении к этому стоит отметить героев, имеющих много урона по области (Leshrac Leshrac, Sand King Sand King, Jakiro Jakiro), и тех, кто может поймать ПЛа (Faceless Void, Legion Commander, Axe Axe)."
         },
         {
           "hero": "Axe",
@@ -1587,7 +1587,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В дополнении к этому стоит отметить героев, имеющих много урона по области (Leshrac Leshrac, Sand King Sand King, Jakiro Jakiro), и тех, кто может поймать ПЛа (Faceless Void Faceless Void, Legion Commander Legion Commander, Axe Axe)."
+          "reason": "В дополнении к этому стоит отметить героев, имеющих много урона по области (Leshrac Leshrac, Sand King Sand King, Jakiro Jakiro), и тех, кто может поймать ПЛа (Faceless Void, Legion Commander, Axe Axe)."
         },
         {
           "hero": "Lion",
@@ -1607,7 +1607,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Рассмотрим несколько контрпиков ПЛа, благодаря которым вы увеличите свои шансы на победу: Sven Sven является серьёзной проблемой для Phantom Lancer Phantom Lancer."
+          "reason": "Рассмотрим несколько контрпиков ПЛа, благодаря которым вы увеличите свои шансы на победу: Sven является серьёзной проблемой для Phantom Lancer."
         },
         {
           "hero": "Earthshaker",
@@ -1617,7 +1617,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Earthshaker Earthshaker."
+          "reason": "Earthshaker."
         },
         {
           "hero": "Jakiro",
@@ -1627,7 +1627,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В дополнении к этому стоит отметить героев, имеющих много урона по области (Leshrac Leshrac, Sand King Sand King, Jakiro Jakiro), и тех, кто может поймать ПЛа (Faceless Void Faceless Void, Legion Commander Legion Commander, Axe Axe)."
+          "reason": "В дополнении к этому стоит отметить героев, имеющих много урона по области (Leshrac Leshrac, Sand King Sand King, Jakiro Jakiro), и тех, кто может поймать ПЛа (Faceless Void, Legion Commander, Axe Axe)."
         },
         {
           "hero": "Legion Commander",
@@ -1637,13 +1637,13 @@
             "offlane",
             "support"
           ],
-          "reason": "В дополнении к этому стоит отметить героев, имеющих много урона по области (Leshrac Leshrac, Sand King Sand King, Jakiro Jakiro), и тех, кто может поймать ПЛа (Faceless Void Faceless Void, Legion Commander Legion Commander, Axe Axe)."
+          "reason": "В дополнении к этому стоит отметить героев, имеющих много урона по области (Leshrac Leshrac, Sand King Sand King, Jakiro Jakiro), и тех, кто может поймать ПЛа (Faceless Void, Legion Commander, Axe Axe)."
         }
       ],
       "items": [],
       "tips": [
         "Поэтому необходимо выбирать агрессивных героев и не давать ПЛу фармить даже в своём лесу.",
-        "Без клонов Phantom Lancer Phantom Lancer становится очень уязвимым, так как его иллюзии используются и для нападения, и для защиты.",
+        "Без клонов Phantom Lancer становится очень уязвимым, так как его иллюзии используются и для нападения, и для защиты.",
         "Старайтесь быстро расправляться и клонами и не давать ПЛу их плодить."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
@@ -1661,7 +1661,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В их число входят Anti-Mage Anti-Mage, Slark Slark, Phantom Lancer Phantom Lancer и Drow Ranger Drow Ranger, на последней из которых неплохо смотрится Hurricane Pike Hurricane Pike."
+          "reason": "В их число входят Anti-Mage, Slark, Phantom Lancer и Drow Ranger, на последней из которых неплохо смотрится Hurricane Pike Hurricane Pike."
         },
         {
           "hero": "Ember Spirit",
@@ -1671,7 +1671,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Storm Spirit Storm Spirit, Ember Spirit Ember Spirit и Void Spirit Void Spirit."
+          "reason": "Storm Spirit Storm Spirit, Ember Spirit и Void Spirit Void Spirit."
         },
         {
           "hero": "Faceless Void",
@@ -1681,7 +1681,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Faceless Void Faceless Void."
+          "reason": "Faceless Void."
         },
         {
           "hero": "Morphling",
@@ -1691,7 +1691,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Перечислим некоторых из них: Morphling Morphling."
+          "reason": "Перечислим некоторых из них: Morphling."
         },
         {
           "hero": "Phantom Lancer",
@@ -1701,7 +1701,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В их число входят Anti-Mage Anti-Mage, Slark Slark, Phantom Lancer Phantom Lancer и Drow Ranger Drow Ranger, на последней из которых неплохо смотрится Hurricane Pike Hurricane Pike."
+          "reason": "В их число входят Anti-Mage, Slark, Phantom Lancer и Drow Ranger, на последней из которых неплохо смотрится Hurricane Pike Hurricane Pike."
         },
         {
           "hero": "Slark",
@@ -1711,7 +1711,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В их число входят Anti-Mage Anti-Mage, Slark Slark, Phantom Lancer Phantom Lancer и Drow Ranger Drow Ranger, на последней из которых неплохо смотрится Hurricane Pike Hurricane Pike."
+          "reason": "В их число входят Anti-Mage, Slark, Phantom Lancer и Drow Ranger, на последней из которых неплохо смотрится Hurricane Pike Hurricane Pike."
         }
       ],
       "items": [],
@@ -1735,7 +1735,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Spectre Spectre."
+          "reason": "Spectre."
         },
         {
           "hero": "Axe",
@@ -1745,7 +1745,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Благодаря этому они будут способны выдерживать натиск и обезвреживать Рикимару: Underlord Underlord, Axe Axe, Ogre Magi Ogre Magi и Night Stalker Night Stalker."
+          "reason": "Благодаря этому они будут способны выдерживать натиск и обезвреживать Рикимару: Underlord, Axe Axe, Ogre Magi и Night Stalker."
         },
         {
           "hero": "Bristleback",
@@ -1755,7 +1755,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Далее мы перечислим некоторые из них — тех, кто способен ответить на пик «невидимки»: Bristleback Bristleback."
+          "reason": "Далее мы перечислим некоторые из них — тех, кто способен ответить на пик «невидимки»: Bristleback."
         },
         {
           "hero": "Underlord",
@@ -1765,7 +1765,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Благодаря этому они будут способны выдерживать натиск и обезвреживать Рикимару: Underlord Underlord, Axe Axe, Ogre Magi Ogre Magi и Night Stalker Night Stalker."
+          "reason": "Благодаря этому они будут способны выдерживать натиск и обезвреживать Рикимару: Underlord, Axe Axe, Ogre Magi и Night Stalker."
         },
         {
           "hero": "Slardar",
@@ -1775,7 +1775,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Slardar Slardar."
+          "reason": "Slardar."
         }
       ],
       "items": [],
@@ -1799,7 +1799,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Bounty Hunter Bounty Hunter — эффективный контрпик на роль саппорта."
+          "reason": "Bounty Hunter — эффективный контрпик на роль саппорта."
         },
         {
           "hero": "Drow Ranger",
@@ -1809,7 +1809,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Сперва выделим наиболее эффективные контрпики: Drow Ranger Drow Ranger — один из лучших керри-героев против «Финда»."
+          "reason": "Сперва выделим наиболее эффективные контрпики: Drow Ranger — один из лучших керри-героев против «Финда»."
         },
         {
           "hero": "Mirana",
@@ -1819,7 +1819,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Невермор уверенно стоит мид 1х1 против большинства героев, но уязвим для гангов, поэтому для контрпика подойдут активные саппорты: Spirit Breaker Spirit Breaker, Pudge Pudge и Mirana Mirana."
+          "reason": "Невермор уверенно стоит мид 1х1 против большинства героев, но уязвим для гангов, поэтому для контрпика подойдут активные саппорты: Spirit Breaker, Pudge и Mirana."
         },
         {
           "hero": "Sniper",
@@ -1829,7 +1829,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Персонажей с высокой дальностью атаки тоже можно считать контрпиком СФа как на линии, так и по игре в целом — Sniper Sniper, Lina Lina и Arc Warden Arc Warden."
+          "reason": "Персонажей с высокой дальностью атаки тоже можно считать контрпиком СФа как на линии, так и по игре в целом — Sniper, Lina и Arc Warden."
         },
         {
           "hero": "Templar Assassin",
@@ -1849,7 +1849,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Axe Axe — хорошая «тройка» против Shadow Fiend Shadow Fiend."
+          "reason": "Axe Axe — хорошая «тройка» против Shadow Fiend."
         },
         {
           "hero": "Lina",
@@ -1859,7 +1859,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Персонажей с высокой дальностью атаки тоже можно считать контрпиком СФа как на линии, так и по игре в целом — Sniper Sniper, Lina Lina и Arc Warden Arc Warden."
+          "reason": "Персонажей с высокой дальностью атаки тоже можно считать контрпиком СФа как на линии, так и по игре в целом — Sniper, Lina и Arc Warden."
         },
         {
           "hero": "Pudge",
@@ -1869,7 +1869,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Невермор уверенно стоит мид 1х1 против большинства героев, но уязвим для гангов, поэтому для контрпика подойдут активные саппорты: Spirit Breaker Spirit Breaker, Pudge Pudge и Mirana Mirana."
+          "reason": "Невермор уверенно стоит мид 1х1 против большинства героев, но уязвим для гангов, поэтому для контрпика подойдут активные саппорты: Spirit Breaker, Pudge и Mirana."
         },
         {
           "hero": "Spirit Breaker",
@@ -1879,7 +1879,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Невермор уверенно стоит мид 1х1 против большинства героев, но уязвим для гангов, поэтому для контрпика подойдут активные саппорты: Spirit Breaker Spirit Breaker, Pudge Pudge и Mirana Mirana."
+          "reason": "Невермор уверенно стоит мид 1х1 против большинства героев, но уязвим для гангов, поэтому для контрпика подойдут активные саппорты: Spirit Breaker, Pudge и Mirana."
         }
       ],
       "items": [],
@@ -1903,7 +1903,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Также хорош Bloodseeker Bloodseeker, чья пассивная способность Thirst Thirst не дает Рыбе скрыться в тумане войны, а из-за ультимейта Rupture Rupture Slark Slark не может активно передвигаться по файту."
+          "reason": "Также хорош Bloodseeker, чья пассивная способность Thirst Thirst не дает Рыбе скрыться в тумане войны, а из-за ультимейта Rupture Rupture Slark не может активно передвигаться по файту."
         },
         {
           "hero": "Naga Siren",
@@ -1913,7 +1913,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Naga Siren Naga Siren — по статистике один из лучших претендентов на роль керри против Slark Slark."
+          "reason": "Naga Siren — по статистике один из лучших претендентов на роль керри против Slark."
         },
         {
           "hero": "Axe",
@@ -1923,7 +1923,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Подойдет все, что имеет АоЕ урон — Techies Techies, Invoker Invoker, Axe Axe, Enigma Enigma и другие."
+          "reason": "Подойдет все, что имеет АоЕ урон — Techies Techies, Invoker, Axe Axe, Enigma Enigma и другие."
         },
         {
           "hero": "Mars",
@@ -1933,14 +1933,14 @@
             "offlane",
             "support"
           ],
-          "reason": "Mars Mars — лучший выбор контрпика на 3-ю позицию против Slark Slark."
+          "reason": "Mars — лучший выбор контрпика на 3-ю позицию против Slark."
         }
       ],
       "items": [],
       "tips": [
         "Ставьте больше вардов.",
         "На темной карте Сларк чувствует себя «как рыба в воде».",
-        "Помните, ночью Slark Slark видит как днем, в отличие от вас."
+        "Помните, ночью Slark видит как днем, в отличие от вас."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
     },
@@ -1957,7 +1957,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Как уже стало понятно — стрелку тяжело играть против персонажей, способных добраться до него и нарушить позиционку: Anti-Mage Anti-Mage, Storm Spirit Storm Spirit, Morphling Morphling, Phantom Assassin Phantom Assassin, Void Spirit Void Spirit и многие другие."
+          "reason": "Как уже стало понятно — стрелку тяжело играть против персонажей, способных добраться до него и нарушить позиционку: Anti-Mage, Storm Spirit Storm Spirit, Morphling, Phantom Assassin, Void Spirit Void Spirit и многие другие."
         },
         {
           "hero": "Phantom Assassin",
@@ -1967,7 +1967,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Как уже стало понятно — стрелку тяжело играть против персонажей, способных добраться до него и нарушить позиционку: Anti-Mage Anti-Mage, Storm Spirit Storm Spirit, Morphling Morphling, Phantom Assassin Phantom Assassin, Void Spirit Void Spirit и многие другие."
+          "reason": "Как уже стало понятно — стрелку тяжело играть против персонажей, способных добраться до него и нарушить позиционку: Anti-Mage, Storm Spirit Storm Spirit, Morphling, Phantom Assassin, Void Spirit Void Spirit и многие другие."
         },
         {
           "hero": "Spectre",
@@ -1977,7 +1977,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Начнем с персонажей, которые контрят снайпера: Spectre Spectre — один из самых сильных контрпиков на 1-ю позицию."
+          "reason": "Начнем с персонажей, которые контрят снайпера: Spectre — один из самых сильных контрпиков на 1-ю позицию."
         },
         {
           "hero": "Axe",
@@ -1987,7 +1987,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Значительно усложняют Снайперу игру и герои-инициаторы, любящие покупать Blink Dagger Blink Dagger + Blade Mail Blade Mail — Axe Axe, Primal Beast Primal Beast, Legion Commander Legion Commander и прочие."
+          "reason": "Значительно усложняют Снайперу игру и герои-инициаторы, любящие покупать Blink Dagger Blink Dagger + Blade Mail Blade Mail — Axe Axe, Primal Beast, Legion Commander и прочие."
         },
         {
           "hero": "Pudge",
@@ -1997,7 +1997,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Pudge Pudge — этот любимчик дотеров отлично ломает позицию Sniper Sniper."
+          "reason": "Pudge — этот любимчик дотеров отлично ломает позицию Sniper."
         },
         {
           "hero": "Centaur Warrunner",
@@ -2007,7 +2007,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Centaur Warrunner Centaur Warrunner — хороший выбор на «тройку»."
+          "reason": "Centaur Warrunner — хороший выбор на «тройку»."
         },
         {
           "hero": "Primal Beast",
@@ -2017,7 +2017,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Значительно усложняют Снайперу игру и герои-инициаторы, любящие покупать Blink Dagger Blink Dagger + Blade Mail Blade Mail — Axe Axe, Primal Beast Primal Beast, Legion Commander Legion Commander и прочие."
+          "reason": "Значительно усложняют Снайперу игру и герои-инициаторы, любящие покупать Blink Dagger Blink Dagger + Blade Mail Blade Mail — Axe Axe, Primal Beast, Legion Commander и прочие."
         },
         {
           "hero": "Legion Commander",
@@ -2027,7 +2027,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Значительно усложняют Снайперу игру и герои-инициаторы, любящие покупать Blink Dagger Blink Dagger + Blade Mail Blade Mail — Axe Axe, Primal Beast Primal Beast, Legion Commander Legion Commander и прочие."
+          "reason": "Значительно усложняют Снайперу игру и герои-инициаторы, любящие покупать Blink Dagger Blink Dagger + Blade Mail Blade Mail — Axe Axe, Primal Beast, Legion Commander и прочие."
         },
         {
           "hero": "Clockwerk",
@@ -2037,12 +2037,12 @@
             "offlane",
             "support"
           ],
-          "reason": "Clockwerk Clockwerk — прекрасный контрпик на роль саппорта, который с помощью Hookshot Hookshot сможет добраться до Снайпера."
+          "reason": "Clockwerk — прекрасный контрпик на роль саппорта, который с помощью Hookshot Hookshot сможет добраться до Снайпера."
         }
       ],
       "items": [],
       "tips": [
-        "Скорость фарма — не самая сильная сторона Sniper Sniper, поэтому старайтесь почаще гангать последнего, не давая ему добраться до ключевых предметов.",
+        "Скорость фарма — не самая сильная сторона Sniper, поэтому старайтесь почаще гангать последнего, не давая ему добраться до ключевых предметов.",
         "От выстрела Assassinate Assassinate можно спрятаться самому или уберечь союзника, если прожать Smoke of Deceit Smoke of Deceit.",
         "Конечно, если поблизости нет вражеских героев."
       ],
@@ -2061,7 +2061,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Мобильные персонажи, такие как Anti-Mage Anti-Mage, Ember Spirit Ember Spirit, Timbersaw Timbersaw и Storm Spirit Storm Spirit способны избежать внезапного нападения Меркуриал или же догнать быструю Spectre Spectre."
+          "reason": "Мобильные персонажи, такие как Anti-Mage, Ember Spirit, Timbersaw и Storm Spirit Storm Spirit способны избежать внезапного нападения Меркуриал или же догнать быструю Spectre."
         },
         {
           "hero": "Viper",
@@ -2071,7 +2071,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Viper Viper — будет хорошим контрпиком на центральную линию."
+          "reason": "Viper — будет хорошим контрпиком на центральную линию."
         },
         {
           "hero": "Lifestealer",
@@ -2081,7 +2081,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Начнем с наиболее эффективных персонажей: Lifestealer Lifestealer — по статистике один из лучших контрпиков Spectre Spectre на роль керри."
+          "reason": "Начнем с наиболее эффективных персонажей: Lifestealer — по статистике один из лучших контрпиков Spectre на роль керри."
         },
         {
           "hero": "Necrophos",
@@ -2091,7 +2091,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Necrophos Necrophos — сильная «тройка» против Spectre Spectre."
+          "reason": "Necrophos — сильная «тройка» против Spectre."
         },
         {
           "hero": "Lion",
@@ -2101,7 +2101,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Контрпики и правильный выбор предметов важны, но также не забывайте о следующих общих советах при игре против Spectre Spectre: Scythe of Vyse Scythe of Vyse или персонажи с хексом (Lion Lion, Shadow Shaman Shadow Shaman) способны мгновенно убивать иллюзию от Shadow Step Shadow Step и Haunt Haunt."
+          "reason": "Контрпики и правильный выбор предметов важны, но также не забывайте о следующих общих советах при игре против Spectre: Scythe of Vyse Scythe of Vyse или персонажи с хексом (Lion Lion, Shadow Shaman) способны мгновенно убивать иллюзию от Shadow Step Shadow Step и Haunt Haunt."
         },
         {
           "hero": "Timbersaw",
@@ -2111,7 +2111,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Мобильные персонажи, такие как Anti-Mage Anti-Mage, Ember Spirit Ember Spirit, Timbersaw Timbersaw и Storm Spirit Storm Spirit способны избежать внезапного нападения Меркуриал или же догнать быструю Spectre Spectre."
+          "reason": "Мобильные персонажи, такие как Anti-Mage, Ember Spirit, Timbersaw и Storm Spirit Storm Spirit способны избежать внезапного нападения Меркуриал или же догнать быструю Spectre."
         },
         {
           "hero": "Winter Wyvern",
@@ -2121,7 +2121,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Неплохо показывают себя и саппорты с замедлением — Undying Undying, Winter Wyvern Winter Wyvern и Venomancer Venomancer."
+          "reason": "Неплохо показывают себя и саппорты с замедлением — Undying, Winter Wyvern и Venomancer Venomancer."
         },
         {
           "hero": "Undying",
@@ -2131,13 +2131,13 @@
             "offlane",
             "support"
           ],
-          "reason": "Неплохо показывают себя и саппорты с замедлением — Undying Undying, Winter Wyvern Winter Wyvern и Venomancer Venomancer."
+          "reason": "Неплохо показывают себя и саппорты с замедлением — Undying, Winter Wyvern и Venomancer Venomancer."
         }
       ],
       "items": [],
       "tips": [
         "А если она сместилась в лес, продолжайте мешать ей фармить — выходите в Smoke of Deceit Smoke of Deceit и блокируйте лесные стаки с помощью Sentry Ward Sentry Ward.",
-        "Помните, без артефактов Spectre Spectre не представляет угрозы.",
+        "Помните, без артефактов Spectre не представляет угрозы.",
         "Многие кор-герои фармят ключевые предметы гораздо быстрее Спектры, поэтому не упустите момент силы вашего пика и постарайтесь снести «трон» Меркуриал как можно раньше — в лейте она страшный соперник."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
@@ -2155,7 +2155,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Phantom Lancer Phantom Lancer — лучший керри для контрпика Ланаи."
+          "reason": "Phantom Lancer — лучший керри для контрпика Ланаи."
         },
         {
           "hero": "Viper",
@@ -2165,7 +2165,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Viper Viper — это настоящий кошмар для игрока на ТА."
+          "reason": "Viper — это настоящий кошмар для игрока на ТА."
         },
         {
           "hero": "Axe",
@@ -2185,7 +2185,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Winter Wyvern Winter Wyvern — удачный контрпик на 4-ю или 5-ю позицию."
+          "reason": "Winter Wyvern — удачный контрпик на 4-ю или 5-ю позицию."
         },
         {
           "hero": "Treant Protector",
@@ -2195,7 +2195,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Как можно заметить, для контрпика Templar Assassin Templar Assassin подходят персонажи, способные быстро снять Refraction Refraction, поэтому хорошим выбором будут Venomancer Venomancer, Shadow Shaman Shadow Shaman, Treant Protector Treant Protector, Batrider Batrider, Phoenix Phoenix, Crystal Maiden Crystal Maiden и другие."
+          "reason": "Как можно заметить, для контрпика Templar Assassin Templar Assassin подходят персонажи, способные быстро снять Refraction Refraction, поэтому хорошим выбором будут Venomancer Venomancer, Shadow Shaman, Treant Protector, Batrider Batrider, Phoenix Phoenix, Crystal Maiden и другие."
         },
         {
           "hero": "Phoenix",
@@ -2205,7 +2205,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Как можно заметить, для контрпика Templar Assassin Templar Assassin подходят персонажи, способные быстро снять Refraction Refraction, поэтому хорошим выбором будут Venomancer Venomancer, Shadow Shaman Shadow Shaman, Treant Protector Treant Protector, Batrider Batrider, Phoenix Phoenix, Crystal Maiden Crystal Maiden и другие."
+          "reason": "Как можно заметить, для контрпика Templar Assassin Templar Assassin подходят персонажи, способные быстро снять Refraction Refraction, поэтому хорошим выбором будут Venomancer Venomancer, Shadow Shaman, Treant Protector, Batrider Batrider, Phoenix Phoenix, Crystal Maiden и другие."
         }
       ],
       "items": [],
@@ -2229,7 +2229,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Начнем с наиболее контрящих персонажей (указаны по ролям): Drow Ranger Drow Ranger — эффективный контрпик на первую позицию."
+          "reason": "Начнем с наиболее контрящих персонажей (указаны по ролям): Drow Ranger — эффективный контрпик на первую позицию."
         },
         {
           "hero": "Axe",
@@ -2249,7 +2249,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Lina Lina — отличный выбор для центральной линии."
+          "reason": "Lina — отличный выбор для центральной линии."
         },
         {
           "hero": "Jakiro",
@@ -2269,7 +2269,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Отдельно отметим Winter Wyvern Winter Wyvern, Winter's Curse Winter's Curse которой, обрушит всю мощь «Террора» на его союзника, а Cold Embrace Cold Embrace спасет от физического урона."
+          "reason": "Отдельно отметим Winter Wyvern, Winter's Curse Winter's Curse которой, обрушит всю мощь «Террора» на его союзника, а Cold Embrace Cold Embrace спасет от физического урона."
         }
       ],
       "items": [],
@@ -2293,7 +2293,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Рассмотрим наиболее подходящие контрпики Тролля (герои указаны по позициями): Medusa Medusa — наверное, наиболее подходящий керри против Troll Warlord Troll Warlord."
+          "reason": "Рассмотрим наиболее подходящие контрпики Тролля (герои указаны по позициями): Medusa — наверное, наиболее подходящий керри против Troll Warlord."
         },
         {
           "hero": "Axe",
@@ -2303,7 +2303,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Axe Axe — по статистике самый лучший контрпик против Troll Warlord Troll Warlord."
+          "reason": "Axe Axe — по статистике самый лучший контрпик против Troll Warlord."
         },
         {
           "hero": "Necrophos",
@@ -2313,7 +2313,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Necrophos Necrophos эффективен против Troll Warlord Troll Warlord, ведь Reaper's Scythe Reaper's Scythe не позволит включить Battle Trance Battle Trance на низком уровне здоровья, а Ghost Shroud Ghost Shroud защитит от физических атак."
+          "reason": "Necrophos эффективен против Troll Warlord, ведь Reaper's Scythe Reaper's Scythe не позволит включить Battle Trance Battle Trance на низком уровне здоровья, а Ghost Shroud Ghost Shroud защитит от физических атак."
         },
         {
           "hero": "Winter Wyvern",
@@ -2323,7 +2323,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Winter Wyvern Winter Wyvern — еще один хороший контрпик на роль саппорта, так как Winter's Curse Winter's Curse обрушит огромный урон Тролля на его союзника, а Cold Embrace Cold Embrace позволит выиграть время и переждать Battle Trance Battle Trance."
+          "reason": "Winter Wyvern — еще один хороший контрпик на роль саппорта, так как Winter's Curse Winter's Curse обрушит огромный урон Тролля на его союзника, а Cold Embrace Cold Embrace позволит выиграть время и переждать Battle Trance Battle Trance."
         }
       ],
       "items": [],
@@ -2337,7 +2337,7 @@
     {
       "hero": "Ursa",
       "category": "agility",
-      "summary": "Уже на линии Ursa Ursa становится опасным противником со своей Fury Swipes Fury Swipes, с которой он может в короткие сроки нанести большое количество урона.",
+      "summary": "Уже на линии Ursa становится опасным противником со своей Fury Swipes Fury Swipes, с которой он может в короткие сроки нанести большое количество урона.",
       "counters": [
         {
           "hero": "Drow Ranger",
@@ -2347,7 +2347,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В этом случае отличным решением будут Arc Warden Arc Warden, Drow Ranger Drow Ranger и Tinker Tinker."
+          "reason": "В этом случае отличным решением будут Arc Warden, Drow Ranger и Tinker Tinker."
         },
         {
           "hero": "Naga Siren",
@@ -2357,7 +2357,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Naga Siren Naga Siren."
+          "reason": "Naga Siren."
         },
         {
           "hero": "Phantom Lancer",
@@ -2367,7 +2367,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Phantom Lancer Phantom Lancer."
+          "reason": "Phantom Lancer."
         },
         {
           "hero": "Necrophos",
@@ -2377,7 +2377,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если вам не подходят вышеперечисленные герои, то можно выбрать контрпик из другой категории персонажей, что не позволят Ursa Ursa атаковать и наносить урон вам или вашим союзникам: Winter Wyvern Winter Wyvern, Necrophos Necrophos и Oracle Oracle."
+          "reason": "Если вам не подходят вышеперечисленные герои, то можно выбрать контрпик из другой категории персонажей, что не позволят Ursa атаковать и наносить урон вам или вашим союзникам: Winter Wyvern, Necrophos и Oracle."
         },
         {
           "hero": "Winter Wyvern",
@@ -2387,7 +2387,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Если вам не подходят вышеперечисленные герои, то можно выбрать контрпик из другой категории персонажей, что не позволят Ursa Ursa атаковать и наносить урон вам или вашим союзникам: Winter Wyvern Winter Wyvern, Necrophos Necrophos и Oracle Oracle."
+          "reason": "Если вам не подходят вышеперечисленные герои, то можно выбрать контрпик из другой категории персонажей, что не позволят Ursa атаковать и наносить урон вам или вашим союзникам: Winter Wyvern, Necrophos и Oracle."
         },
         {
           "hero": "Wraith King",
@@ -2397,12 +2397,12 @@
             "offlane",
             "support"
           ],
-          "reason": "Wraith King Wraith King."
+          "reason": "Wraith King."
         }
       ],
       "items": [],
       "tips": [
-        "Ursa Ursa — герой темпа.",
+        "Ursa — герой темпа.",
         "Это значит, что он быстро набирает мощь и может участвовать в боях с минимумом предметов.",
         "В затянувшейся игре или в случае отсутствия притока золота от убийств врагов в командных сражениях он становится слабее, поскольку у противников уже могут появиться предметы, которые будут значительным подспорьем против медведя."
       ],
@@ -2411,7 +2411,7 @@
     {
       "hero": "Vengeful Spirit",
       "category": "agility",
-      "summary": "Одна из ключевых способностей Vengeful Spirit Vengeful Spirit — ультимейт Nether Swap Nether Swap.",
+      "summary": "Одна из ключевых способностей Vengeful Spirit — ультимейт Nether Swap Nether Swap.",
       "counters": [
         {
           "hero": "Phantom Lancer",
@@ -2421,7 +2421,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Phantom Lancer Phantom Lancer."
+          "reason": "Phantom Lancer."
         },
         {
           "hero": "Axe",
@@ -2431,7 +2431,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Неплохими контрпиками станут герои, которые могут извлечь выгоду от внезапной Nether Swap Nether Swap: Leshrac Leshrac, Necrophos Necrophos, Axe Axe, Tidehunter Tidehunter и Dark Seer Dark Seer, поскольку им необходимо сблизиться с противниками, чтобы применить свои способности с наивысшей эффективностью."
+          "reason": "Неплохими контрпиками станут герои, которые могут извлечь выгоду от внезапной Nether Swap Nether Swap: Leshrac Leshrac, Necrophos, Axe Axe, Tidehunter и Dark Seer, поскольку им необходимо сблизиться с противниками, чтобы применить свои способности с наивысшей эффективностью."
         },
         {
           "hero": "Necrophos",
@@ -2441,7 +2441,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Неплохими контрпиками станут герои, которые могут извлечь выгоду от внезапной Nether Swap Nether Swap: Leshrac Leshrac, Necrophos Necrophos, Axe Axe, Tidehunter Tidehunter и Dark Seer Dark Seer, поскольку им необходимо сблизиться с противниками, чтобы применить свои способности с наивысшей эффективностью."
+          "reason": "Неплохими контрпиками станут герои, которые могут извлечь выгоду от внезапной Nether Swap Nether Swap: Leshrac Leshrac, Necrophos, Axe Axe, Tidehunter и Dark Seer, поскольку им необходимо сблизиться с противниками, чтобы применить свои способности с наивысшей эффективностью."
         },
         {
           "hero": "Tidehunter",
@@ -2451,12 +2451,12 @@
             "offlane",
             "support"
           ],
-          "reason": "Неплохими контрпиками станут герои, которые могут извлечь выгоду от внезапной Nether Swap Nether Swap: Leshrac Leshrac, Necrophos Necrophos, Axe Axe, Tidehunter Tidehunter и Dark Seer Dark Seer, поскольку им необходимо сблизиться с противниками, чтобы применить свои способности с наивысшей эффективностью."
+          "reason": "Неплохими контрпиками станут герои, которые могут извлечь выгоду от внезапной Nether Swap Nether Swap: Leshrac Leshrac, Necrophos, Axe Axe, Tidehunter и Dark Seer, поскольку им необходимо сблизиться с противниками, чтобы применить свои способности с наивысшей эффективностью."
         }
       ],
       "items": [],
       "tips": [
-        "Если вы видите одинокую Vengeful Spirit Vengeful Spirit, вышедшую на линию к крипам, то не стоит радоваться раньше времени и идти убивать ее.",
+        "Если вы видите одинокую Vengeful Spirit, вышедшую на линию к крипам, то не стоит радоваться раньше времени и идти убивать ее.",
         "Скорее всего она является приманкой и со своими союзниками поджидает неаккуратную жертву, к которой применит Nether Swap Nether Swap.",
         "Не стоит долго игнорировать Венгу в бою, иначе она будет спамить Wave of Terror Wave of Terror и оглушениями от Magic Missile Magic Missile, что может привести к смерти ваших хрупких союзников, например — саппортов."
       ],
@@ -2475,7 +2475,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Также ему доставляют проблемы магические резисты (Oracle Oracle, Juggernaut Juggernaut, Lifestealer Lifestealer) и множество призванных юнитов (Beastmaster Beastmaster, Broodmother Broodmother)."
+          "reason": "Также ему доставляют проблемы магические резисты (Oracle, Juggernaut, Lifestealer) и множество призванных юнитов (Beastmaster Beastmaster, Broodmother Broodmother)."
         },
         {
           "hero": "Juggernaut",
@@ -2485,7 +2485,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Также ему доставляют проблемы магические резисты (Oracle Oracle, Juggernaut Juggernaut, Lifestealer Lifestealer) и множество призванных юнитов (Beastmaster Beastmaster, Broodmother Broodmother)."
+          "reason": "Также ему доставляют проблемы магические резисты (Oracle, Juggernaut, Lifestealer) и множество призванных юнитов (Beastmaster Beastmaster, Broodmother Broodmother)."
         },
         {
           "hero": "Phantom Lancer",
@@ -2495,7 +2495,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Viper Viper страдает от мобильных героев (Weaver Weaver, Windranger Windranger, Phantom Lancer Phantom Lancer) и персонажей с дальним типом атаки (Sniper Sniper, Lina Lina, Arc Warden Arc Warden)."
+          "reason": "В целом Viper страдает от мобильных героев (Weaver, Windranger, Phantom Lancer) и персонажей с дальним типом атаки (Sniper, Lina, Arc Warden)."
         },
         {
           "hero": "Sniper",
@@ -2505,7 +2505,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Viper Viper страдает от мобильных героев (Weaver Weaver, Windranger Windranger, Phantom Lancer Phantom Lancer) и персонажей с дальним типом атаки (Sniper Sniper, Lina Lina, Arc Warden Arc Warden)."
+          "reason": "В целом Viper страдает от мобильных героев (Weaver, Windranger, Phantom Lancer) и персонажей с дальним типом атаки (Sniper, Lina, Arc Warden)."
         },
         {
           "hero": "Weaver",
@@ -2515,7 +2515,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Viper Viper страдает от мобильных героев (Weaver Weaver, Windranger Windranger, Phantom Lancer Phantom Lancer) и персонажей с дальним типом атаки (Sniper Sniper, Lina Lina, Arc Warden Arc Warden)."
+          "reason": "В целом Viper страдает от мобильных героев (Weaver, Windranger, Phantom Lancer) и персонажей с дальним типом атаки (Sniper, Lina, Arc Warden)."
         },
         {
           "hero": "Lifestealer",
@@ -2525,7 +2525,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Также ему доставляют проблемы магические резисты (Oracle Oracle, Juggernaut Juggernaut, Lifestealer Lifestealer) и множество призванных юнитов (Beastmaster Beastmaster, Broodmother Broodmother)."
+          "reason": "Также ему доставляют проблемы магические резисты (Oracle, Juggernaut, Lifestealer) и множество призванных юнитов (Beastmaster Beastmaster, Broodmother Broodmother)."
         },
         {
           "hero": "Windranger",
@@ -2535,7 +2535,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Viper Viper страдает от мобильных героев (Weaver Weaver, Windranger Windranger, Phantom Lancer Phantom Lancer) и персонажей с дальним типом атаки (Sniper Sniper, Lina Lina, Arc Warden Arc Warden)."
+          "reason": "В целом Viper страдает от мобильных героев (Weaver, Windranger, Phantom Lancer) и персонажей с дальним типом атаки (Sniper, Lina, Arc Warden)."
         },
         {
           "hero": "Lina",
@@ -2545,7 +2545,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Viper Viper страдает от мобильных героев (Weaver Weaver, Windranger Windranger, Phantom Lancer Phantom Lancer) и персонажей с дальним типом атаки (Sniper Sniper, Lina Lina, Arc Warden Arc Warden)."
+          "reason": "В целом Viper страдает от мобильных героев (Weaver, Windranger, Phantom Lancer) и персонажей с дальним типом атаки (Sniper, Lina, Arc Warden)."
         },
         {
           "hero": "Chaos Knight",
@@ -2555,12 +2555,12 @@
             "offlane",
             "support"
           ],
-          "reason": "Рассмотрим несколько героев, хорошо закрывающих Вайпера (персонажи указаны по позициям): Chaos Knight Chaos Knight."
+          "reason": "Рассмотрим несколько героев, хорошо закрывающих Вайпера (персонажи указаны по позициям): Chaos Knight."
         }
       ],
       "items": [],
       "tips": [
-        "Помните, на 25-м уровне Viper Viper может стать универсалом.",
+        "Помните, на 25-м уровне Viper может стать универсалом.",
         "При наличии нужных предметов благодаря этому таланту урон Вайпера увеличится в разы.",
         "Именно поэтому так важно закончить игру до того, как это произойдёт."
       ],
@@ -2569,7 +2569,7 @@
     {
       "hero": "Weaver",
       "category": "agility",
-      "summary": "В основном Weaver Weaver используется на первой позиции, однако иногда его можно увидеть и в качестве «четвёрки».",
+      "summary": "В основном Weaver используется на первой позиции, однако иногда его можно увидеть и в качестве «четвёрки».",
       "counters": [
         {
           "hero": "Bounty Hunter",
@@ -2579,7 +2579,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Weaver Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker Night Stalker, Drow Ranger Drow Ranger), большого количества станов (Spirit Breaker Spirit Breaker, Shadow Shaman Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar Slardar, Bounty Hunter Bounty Hunter)."
+          "reason": "В целом Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker, Drow Ranger), большого количества станов (Spirit Breaker, Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar, Bounty Hunter)."
         },
         {
           "hero": "Drow Ranger",
@@ -2589,7 +2589,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Weaver Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker Night Stalker, Drow Ranger Drow Ranger), большого количества станов (Spirit Breaker Spirit Breaker, Shadow Shaman Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar Slardar, Bounty Hunter Bounty Hunter)."
+          "reason": "В целом Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker, Drow Ranger), большого количества станов (Spirit Breaker, Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar, Bounty Hunter)."
         },
         {
           "hero": "Faceless Void",
@@ -2599,7 +2599,7 @@
             "offlane",
             "support"
           ],
-          "reason": "Вот некоторые из них (указаны по позициям): Faceless Void Faceless Void."
+          "reason": "Вот некоторые из них (указаны по позициям): Faceless Void."
         },
         {
           "hero": "Axe",
@@ -2619,7 +2619,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Weaver Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker Night Stalker, Drow Ranger Drow Ranger), большого количества станов (Spirit Breaker Spirit Breaker, Shadow Shaman Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar Slardar, Bounty Hunter Bounty Hunter)."
+          "reason": "В целом Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker, Drow Ranger), большого количества станов (Spirit Breaker, Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar, Bounty Hunter)."
         },
         {
           "hero": "Lion",
@@ -2629,7 +2629,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Weaver Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker Night Stalker, Drow Ranger Drow Ranger), большого количества станов (Spirit Breaker Spirit Breaker, Shadow Shaman Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar Slardar, Bounty Hunter Bounty Hunter)."
+          "reason": "В целом Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker, Drow Ranger), большого количества станов (Spirit Breaker, Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar, Bounty Hunter)."
         },
         {
           "hero": "Spirit Breaker",
@@ -2639,7 +2639,7 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Weaver Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker Night Stalker, Drow Ranger Drow Ranger), большого количества станов (Spirit Breaker Spirit Breaker, Shadow Shaman Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar Slardar, Bounty Hunter Bounty Hunter)."
+          "reason": "В целом Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker, Drow Ranger), большого количества станов (Spirit Breaker, Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar, Bounty Hunter)."
         },
         {
           "hero": "Slardar",
@@ -2649,13 +2649,13 @@
             "offlane",
             "support"
           ],
-          "reason": "В целом Weaver Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker Night Stalker, Drow Ranger Drow Ranger), большого количества станов (Spirit Breaker Spirit Breaker, Shadow Shaman Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar Slardar, Bounty Hunter Bounty Hunter)."
+          "reason": "В целом Weaver страдает от сайленсев (Skywrath Mage Skywrath Mage, Night Stalker, Drow Ranger), большого количества станов (Spirit Breaker, Shadow Shaman, Lion Lion) и героев, показывающих невидимых персонажей (Slardar, Bounty Hunter)."
         }
       ],
       "items": [],
       "tips": [
         "Не забывайте о Dust of Appearance Dust of Appearance и Sentry Ward Sentry Ward!",
-        "Несмотря на кор-потенциал, Weaver Weaver предпочитает не затягивать игры, так как в глубоком лейте он проигрывает большинству классических керри.",
+        "Несмотря на кор-потенциал, Weaver предпочитает не затягивать игры, так как в глубоком лейте он проигрывает большинству классических керри.",
         "Если Виверу обеспечили хорошее начало, старайтесь не драться с ним до получения своих предметов, выходите в позднюю стадию матча."
       ],
       "sourceFile": "src/shared/data/Ловкачи.txt"
