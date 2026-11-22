@@ -12,7 +12,7 @@ export function Header({ gameVersion }: HeaderProps) {
       </div>
 
       <div className="badge">
-        STRATZ В· {gameVersion || 'Р—РђР“Р РЈР—РљРђ'}
+        STRATZ В· {gameVersion || '  R  �   Y R'}
       </div>
     </header>
   )

@@ -57,7 +57,7 @@ export const server = http.createServer(async (req, res) => {
       const result = rateLimit(req.socket.remoteAddress || 'unknown')
       if (!result.allowed) {
         res.setHeader('Retry-After', result.retryAfter)
-        throw new AppError(429, 'Слишком много запросов', 'rate_limit')
+        throw new AppError(429, '!;8H:>< много запросов', 'rate_limit')
       }
     }
     if (url.pathname === '/api/heroes') {
@@ -133,6 +133,6 @@ if (
 ) {
   const port = Number(process.env.PORT) || 3001
   server.listen(port, process.env.PORT ? '0.0.0.0' : '127.0.0.1', () =>
-    console.log(`Сервер запущен на порту ${port}`),
+    console.log(`!5@25@ запущен на порту ${port}`),
   )
 }

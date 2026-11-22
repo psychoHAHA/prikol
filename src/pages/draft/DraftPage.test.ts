@@ -10,7 +10,7 @@ describe('isAbortError', () => {
   })
 
   it('does not classify regular errors as cancellation', () => {
-    expect(isAbortError(new Error('Сервер недоступен'))).toBe(false)
+    expect(isAbortError(new Error('!5@25@ недоступен'))).toBe(false)
     expect(isAbortError('AbortError')).toBe(false)
     expect(isAbortError(null)).toBe(false)
   })

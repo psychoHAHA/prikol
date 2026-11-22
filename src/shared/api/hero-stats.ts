@@ -157,7 +157,7 @@ async function readResponse<T>(
       throw new ApiError(fallbackMessage, response.status)
     }
 
-    throw new Error('Сервер вернул некорректный JSON')
+    throw new Error('!5@25@ вернул некорректный JSON')
   }
 
   if (!response.ok) {
@@ -184,7 +184,7 @@ export async function getHeroes(signal?: AbortSignal): Promise<HeroesResponse> {
   )
 
   if (!isHeroesApiResponse(data)) {
-    throw new Error('Сервер вернул некорректный список героев')
+    throw new Error('!5@25@ вернул некорректный список героев')
   }
 
   const validHeroes = data.heroes.filter(isHeroApiDto)

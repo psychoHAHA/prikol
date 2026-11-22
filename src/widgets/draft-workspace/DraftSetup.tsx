@@ -60,7 +60,7 @@ export function DraftSetup({
       </select>
       <div className="teams">
         <TeamPicker
-          title="СОЮЗНИКИ"
+          title="ПРОТИВНИКИ"
           selected={allies}
           other={enemies}
           names={names}

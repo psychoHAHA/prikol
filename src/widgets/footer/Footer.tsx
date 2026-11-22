@@ -11,7 +11,7 @@ export function Footer() {
       </div>
 
       <div className="sources">
-        ИСТОЧНИК
+        !"'
         <a href="https://stratz.com/" target="_blank" rel="noreferrer">
           STRATZ ↗
         </a>

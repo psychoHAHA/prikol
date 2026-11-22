@@ -14,7 +14,7 @@ export async function fetchHeroes() {
     !versions.length ||
     !Array.isArray(data.constants?.heroes)
   )
-    throw new AppError(502, 'STRATZ РЅРµ РІРµСЂРЅСѓР» СЃРїСЂР°РІРѕС‡РЅРёРє РіРµСЂРѕРµРІ', 'stratz')
+    throw new AppError(502, 'STRATZ   �   �! !S � ! W! �  U!!  Q T  V �! U � ', 'stratz')
   const version = versions.reduce((a, b) =>
     a.asOfDateTime > b.asOfDateTime ? a : b,
   )

@@ -51,7 +51,7 @@ describe('hero stats API client', () => {
     vi.stubGlobal(
       'fetch',
       vi.fn().mockResolvedValue(
-        new Response(JSON.stringify({ error: 'Сервер недоступен' }), {
+        new Response(JSON.stringify({ error: '!5@25@ недоступен' }), {
           status: 503,
           headers: { 'Content-Type': 'application/json' },
         }),
@@ -172,7 +172,7 @@ describe('hero stats API client', () => {
     )
 
     await expect(getHeroes()).rejects.toThrow(
-      'Сервер вернул некорректный список героев',
+      '!5@25@ вернул некорректный список героев',
     )
   })
 
@@ -195,7 +195,7 @@ describe('hero stats API client', () => {
     )
 
     await expect(getHeroes()).rejects.toThrow(
-      'Сервер вернул некорректный список героев',
+      '!5@25@ вернул некорректный список героев',
     )
   })
   it('uses a fallback message when the error response is null', async () => {
