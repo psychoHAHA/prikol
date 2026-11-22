@@ -60,10 +60,14 @@ export function DraftSetup({
         <option value="POSITION_4">4 · Частичная поддержка</option>
         <option value="POSITION_5">5 · Полная поддержка</option>
       </select>
+      <div className="mobile-team-tabs" role="tablist" aria-label="Команды">
+        <button type="button" className={mobileTeam === "allies" ? "active" : ""} onClick={() => setMobileTeam("allies")}>Союзники ({allies.length})</button>
+        <button type="button" className={mobileTeam === "enemies" ? "active" : ""} onClick={() => setMobileTeam("enemies")}>Враги ({enemies.length})</button>
+      </div>
       <div className="teams">
         <div className={`team-panel team-panel--allies ${mobileTeam === "allies" ? "team-panel--active" : ""}`}>
         <TeamPicker
-          title="ПРОТИВНИКИ"
+          title="СОЮЗНИКИ"
           selected={allies}
           other={enemies}
           names={names}
@@ -83,10 +87,6 @@ export function DraftSetup({
           onChange={onEnemiesChange}
           enemy
         /></div>
-      </div>
-      <div className="mobile-team-tabs" role="tablist" aria-label="Команды">
-        <button type="button" className={mobileTeam === "allies" ? "active" : ""} onClick={() => setMobileTeam("allies")}>Союзники ({allies.length})</button>
-        <button type="button" className={mobileTeam === "enemies" ? "active" : ""} onClick={() => setMobileTeam("enemies")}>Враги ({enemies.length})</button>
       </div>
   
       {enemies.length > 0 && (
