@@ -1,0 +1,17 @@
+﻿.card-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin: 14px 0 10px;
+}
+
+.card-stat strong {
+  color: var(--accent);
+  font-size: 30px;
+  letter-spacing: -0.05em;
+}
+
+.card-stat span {
+  color: var(--muted);
+  font-size: 12px;
+}

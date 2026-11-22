@@ -1,4 +1,60 @@
-import type { Hero, Matchup, Recommendation } from '../../shared/types/domains'
+﻿import type { ExpertInsight, Hero, Matchup, Recommendation } from '../../shared/types/domains'
+import { knowledge } from '../../shared/data/knowledge-catalog'
+
+type KnowledgeEntry = (typeof knowledge.heroes)[number]
+
+export function expertInsightFor(
+  recommendedHero: string,
+  enemyNames: string[],
+): ExpertInsight | undefined {
+  const entries = (knowledge.heroes as KnowledgeEntry[]).filter((entry) =>
+    enemyNames.includes(entry.hero) && entry.counters.some((counter) => counter.hero === recommendedHero),
+  )
+  const reasons = entries.flatMap((entry) =>
+    entry.counters
+      .filter((counter) => counter.hero === recommendedHero)
+      .map((counter) => `РџСЂРѕС‚РёРІ ${entry.hero}: ${counter.reason}`),
+  )
+  if (!reasons.length) return undefined
+  const items = entries.flatMap((entry) => entry.items)
+  const tips = [...new Set(entries.flatMap((entry) => entry.tips))]
+  return { reasons, items, tips, source: knowledge.source }
+}
+
+const positionRoles: Record<string, string[]> = {
+  POSITION_1: ['carry'],
+  POSITION_2: ['mid'],
+  POSITION_3: ['offlane'],
+  POSITION_4: ['support'],
+  POSITION_5: ['support'],
+}
+
+export function recommendFromKnowledge(
+  allHeroes: Hero[],
+  enemyNames: string[],
+  position: string,
+): Recommendation[] {
+  const roles = positionRoles[position] || []
+  const byName = new Map(allHeroes.map((hero) => [hero.name, hero]))
+  const results = new Map<number, Recommendation>()
+  for (const entry of knowledge.heroes) {
+    if (!enemyNames.includes(entry.hero)) continue
+    for (const counter of entry.counters) {
+      if (!counter.roles.some((role) => roles.includes(role))) continue
+      const hero = byName.get(counter.hero)
+      if (!hero) continue
+      const current = results.get(hero.id) ?? {
+        hero,
+        games: 0,
+        score: 0,
+        against: [],
+      }
+      current.expert = expertInsightFor(hero.name, enemyNames)
+      results.set(hero.id, current)
+    }
+  }
+  return [...results.values()]
+}
 
 export function recommendFromStratz(
   allHeroes: Hero[],
@@ -62,9 +118,9 @@ export function recommendFromStratz(
   return [...scores.values()]
     .filter((item) => item.games >= 30)
     .sort((a, b) => b.score / b.games - a.score / a.games || b.games - a.games)
-    .slice(0, 5)
 }
 
 export function recommend(): Recommendation[] {
   return []
 }
+

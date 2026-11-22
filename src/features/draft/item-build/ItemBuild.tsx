@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+﻿import { useEffect, useState } from "react"
 
 import type {
   GuideResponse,
@@ -9,6 +9,7 @@ import type {
 import type { Hero } from "../../../shared/types/domains"
 
 import { getHeroGuide, getHeroItems } from "../../../shared/api/hero-stats"
+import { knowledge } from "../../../shared/data/knowledge-catalog"
 
 interface ItemBuildProps {
   hero: Hero
@@ -23,7 +24,17 @@ type ItemsState =
 
 type GuideState = { loading: true } | { error: string } | GuideResponse
 
+type LocalBuildItem = readonly [string, number, number, string]
+type LocalKnowledge = (typeof knowledge.heroes)[number] & { build?: LocalBuildItem[] }
+
+function itemImage(name: string) {
+  const slug = name.toLowerCase().replace(/['вЂ™]/g, '').replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '')
+  return `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/${slug}.png`
+}
+
 export function ItemBuild({ hero, position, enemies }: ItemBuildProps) {
+  const localHero = (knowledge.heroes as unknown as LocalKnowledge[]).find((entry) => entry.hero === hero.name)
+  const localItems: readonly LocalBuildItem[] = localHero?.build ?? []
   const enemyIds = enemies.map((enemy) => enemy.id)
   const [state, setState] = useState<ItemsState | null>(null)
   const [guide, setGuide] = useState<GuideState | null>(null)
@@ -48,77 +59,101 @@ export function ItemBuild({ hero, position, enemies }: ItemBuildProps) {
     return () => controller.abort()
   }, [hero.id, position, enemyIds.join(",")])
   if (!state || "loading" in state) {
-    return <p>Загружаем предметы…</p>
+    return (
+      <div className="item-loading" aria-live="polite" aria-label="Р—Р°РіСЂСѓР¶Р°РµРј РїСЂРµРґРјРµС‚С‹">
+        <p className="loading-label">Р—Р°РіСЂСѓР¶Р°РµРј РїСЂРµРґРјРµС‚С‹ РґР»СЏ СЌС‚РѕР№ РїРѕР·РёС†РёРёвЂ¦</p>
+        <span /><span /><span />
+      </div>
+    )
   }
   if ("error" in state) {
-    return <p role="alert">Не удалось загрузить предметы: {state.error}</p>
+    return <p role="alert">РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ РїСЂРµРґРјРµС‚С‹: {state.error}</p>
   }
   return (
     <div className="item-build">
       <p>
-        <strong>Популярные предметы на этой позиции</strong>
+        <strong>РџРѕРїСѓР»СЏСЂРЅС‹Рµ РїСЂРµРґРјРµС‚С‹ РЅР° СЌС‚РѕР№ РїРѕР·РёС†РёРё</strong>
       </p>
       {state.data.items.length ? (
         <ul>
           {state.data.items.map((item) => (
             <li key={item.itemId}>
-              {item.name} — {item.games} покупок, победы в этих матчах:{" "}
+              <img className="item-icon" src={itemImage(item.name)} alt="" />
+              {item.name} вЂ” {item.games} РїРѕРєСѓРїРѕРє, РїРѕР±РµРґС‹ РІ СЌС‚РёС… РјР°С‚С‡Р°С…:{" "}
               {(item.winRate * 100).toFixed(1)}%
             </li>
           ))}
         </ul>
       ) : (
-        <p>Недостаточно данных о покупках.</p>
+        <p>РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґР°РЅРЅС‹С… Рѕ РїРѕРєСѓРїРєР°С….</p>
       )}
+      {localItems.length > 0 && <>
+      <p><strong>Р›РѕРєР°Р»СЊРЅР°СЏ СЂРµРєРѕРјРµРЅРґР°С†РёСЏ СЃР±РѕСЂРєРё</strong></p>
+      <ol className="local-item-build">
+        {localItems.map((item: LocalBuildItem) => {
+          const [name, seconds, matches, reason] = item
+          return (
+          <li key={name}><img className="item-icon" src={itemImage(name)} alt="" />{name} вЂ” РїСЂРёРјРµСЂРЅРѕ {Math.floor(seconds / 60)}:{String(seconds % 60).padStart(2, '0')}, РІ {matches} РёР· 5 РјР°С‚С‡РµР№</li>
+          )
+        })}
+      </ol>
+      <ul className="local-item-comments">
+        {localItems.map((item: LocalBuildItem) => item[3] && <li key={item[0]}><strong>{item[0]}:</strong> {item[3]}</li>)}
+      </ul>
+      </>}
       <p>
-        Это частые покупки по статистике STRATZ, а не готовый порядок сборки.
-        Учитывай способности врагов и ход игры; процент побед не доказывает
-        эффективность предмета.
+        Р­С‚Рѕ С‡Р°СЃС‚С‹Рµ РїРѕРєСѓРїРєРё РїРѕ СЃС‚Р°С‚РёСЃС‚РёРєРµ STRATZ, Р° РЅРµ РіРѕС‚РѕРІС‹Р№ РїРѕСЂСЏРґРѕРє СЃР±РѕСЂРєРё.
+        РЈС‡РёС‚С‹РІР°Р№ СЃРїРѕСЃРѕР±РЅРѕСЃС‚Рё РІСЂР°РіРѕРІ Рё С…РѕРґ РёРіСЂС‹; РїСЂРѕС†РµРЅС‚ РїРѕР±РµРґ РЅРµ РґРѕРєР°Р·С‹РІР°РµС‚
+        СЌС„С„РµРєС‚РёРІРЅРѕСЃС‚СЊ РїСЂРµРґРјРµС‚Р°.
       </p>
       {guide && "loading" in guide && (
-        <p>Анализируем покупки в матчах против соперников…</p>
+        <div className="guide-loading" aria-live="polite">
+          <p className="loading-label">РђРЅР°Р»РёР·РёСЂСѓРµРј РїРѕРєСѓРїРєРё РїСЂРѕС‚РёРІ РІС‹Р±СЂР°РЅРЅС‹С… СЃРѕРїРµСЂРЅРёРєРѕРІвЂ¦</p>
+          <span /><span />
+        </div>
       )}
 
       {guide && "error" in guide && (
-        <p role="alert">Не удалось проанализировать матчи: {guide.error}</p>
+        <p role="alert">РќРµ СѓРґР°Р»РѕСЃСЊ РїСЂРѕР°РЅР°Р»РёР·РёСЂРѕРІР°С‚СЊ РјР°С‚С‡Рё: {guide.error}</p>
       )}
 
       {guide && "guides" in guide && guide.guides.length ? (
         <div>
           <p>
-            <strong>Порядок покупок в примерах матчей</strong>
+            <strong>РџРѕСЂСЏРґРѕРє РїРѕРєСѓРїРѕРє РІ РїСЂРёРјРµСЂР°С… РјР°С‚С‡РµР№</strong>
           </p>
           <p>
-            Проанализировано {guide.sampleSize} из {guide.requestedMatches}{" "}
-            матчей: в каждом был хотя бы один выбранный соперник. Это не
-            обязательно матчи против всего пика.
+            РџСЂРѕР°РЅР°Р»РёР·РёСЂРѕРІР°РЅРѕ {guide.sampleSize} РёР· {guide.requestedMatches}{" "}
+            РјР°С‚С‡РµР№: РІ РєР°Р¶РґРѕРј Р±С‹Р» С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ РІС‹Р±СЂР°РЅРЅС‹Р№ СЃРѕРїРµСЂРЅРёРє. Р­С‚Рѕ РЅРµ
+            РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РјР°С‚С‡Рё РїСЂРѕС‚РёРІ РІСЃРµРіРѕ РїРёРєР°.
           </p>
           {guide.build.length ? (
             <ol>
               {guide.build.map((item) => (
                 <li key={item.itemId}>
-                  {item.name} — примерно {Math.floor(item.medianTime / 60)}:
-                  {String(item.medianTime % 60).padStart(2, "0")}, в{" "}
-                  {item.matches} из {guide.sampleSize} матчей
+                  <img className="item-icon" src={itemImage(item.name)} alt="" />
+                  {item.name} вЂ” РїСЂРёРјРµСЂРЅРѕ {Math.floor(item.medianTime / 60)}:
+                  {String(item.medianTime % 60).padStart(2, "0")}, РІ{" "}
+                  {item.matches} РёР· {guide.sampleSize} РјР°С‚С‡РµР№
                 </li>
               ))}
             </ol>
           ) : (
-            <p>Для порядка покупок недостаточно повторяющихся данных.</p>
+            <p>Р”Р»СЏ РїРѕСЂСЏРґРєР° РїРѕРєСѓРїРѕРє РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїРѕРІС‚РѕСЂСЏСЋС‰РёС…СЃСЏ РґР°РЅРЅС‹С….</p>
           )}
           <p>
-            Порядок основан на медианном времени покупки предмета в небольшой
-            выборке; компоненты тоже могут попасть в список. Это ориентир, а не
-            обязательная сборка или доказательство эффективности против
-            конкретного героя.
+            РџРѕСЂСЏРґРѕРє РѕСЃРЅРѕРІР°РЅ РЅР° РјРµРґРёР°РЅРЅРѕРј РІСЂРµРјРµРЅРё РїРѕРєСѓРїРєРё РїСЂРµРґРјРµС‚Р° РІ РЅРµР±РѕР»СЊС€РѕР№
+            РІС‹Р±РѕСЂРєРµ; РєРѕРјРїРѕРЅРµРЅС‚С‹ С‚РѕР¶Рµ РјРѕРіСѓС‚ РїРѕРїР°СЃС‚СЊ РІ СЃРїРёСЃРѕРє. Р­С‚Рѕ РѕСЂРёРµРЅС‚РёСЂ, Р° РЅРµ
+            РѕР±СЏР·Р°С‚РµР»СЊРЅР°СЏ СЃР±РѕСЂРєР° РёР»Рё РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ СЌС„С„РµРєС‚РёРІРЅРѕСЃС‚Рё РїСЂРѕС‚РёРІ
+            РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РіРµСЂРѕСЏ.
           </p>
           <p>
-            <strong>Примеры матчей:</strong>
+            <strong>РџСЂРёРјРµСЂС‹ РјР°С‚С‡РµР№:</strong>
           </p>
           {guide.guides.map((item) => (
             <p key={item.againstHeroId}>
               {enemies.find((enemy) => enemy.id === item.againstHeroId)?.name}:{" "}
-              {item.matchCount} матчей{" "}
+              {item.matchCount} РјР°С‚С‡РµР№{" "}
               {item.matchIds.slice(0, 3).map((id) => (
                 <a
                   key={id}
@@ -139,8 +174,9 @@ export function ItemBuild({ hero, position, enemies }: ItemBuildProps) {
         target="_blank"
         rel="noreferrer"
       >
-        Подробнее на STRATZ ↗
+        РџРѕРґСЂРѕР±РЅРµРµ РЅР° STRATZ в†—
       </a>
     </div>
   )
 }
+

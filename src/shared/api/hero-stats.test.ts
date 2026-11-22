@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from 'vitest'
+﻿import { afterEach, describe, expect, it, vi } from 'vitest'
 
 import { ApiError, getHeroes, getHeroItems } from './hero-stats'
 
@@ -13,7 +13,7 @@ describe('hero stats API client', () => {
       vi.fn().mockResolvedValue(
         new Response(
           JSON.stringify({
-            heroes: [{ id: 1, name: 'Axe' }],
+            heroes: [{ id: 2, name: 'Axe' }],
             fetchedAt: '2026-01-01T00:00:00.000Z',
             gameVersion: { id: 190, name: '7.41f', asOfDateTime: 1789430400 },
           }),
@@ -23,7 +23,7 @@ describe('hero stats API client', () => {
     )
 
     await expect(getHeroes()).resolves.toMatchObject({
-      heroes: [{ id: 1, name: 'Axe' }],
+      heroes: [{ id: 2, name: 'Axe' }],
       gameVersion: { id: 190, name: '7.41f', asOfDateTime: 1789430400 },
     })
     expect(fetch).toHaveBeenCalledWith('/api/heroes', { signal: undefined })
@@ -113,7 +113,7 @@ describe('hero stats API client', () => {
           JSON.stringify({
             heroes: [
               {
-                id: 1,
+                id: 2,
                 name: 'Axe',
                 internalField: 'server-only',
               },
@@ -130,12 +130,7 @@ describe('hero stats API client', () => {
 
     const result = await getHeroes()
 
-    expect(result.heroes).toEqual([
-      {
-        id: 1,
-        name: 'Axe',
-      },
-    ])
+    expect(result.heroes).toEqual([expect.objectContaining({ id: 2, name: 'Axe', attribute: 'strength', image: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/axe.png' })])
   })
 
   it('filters malformed heroes from the API response', async () => {
@@ -145,9 +140,9 @@ describe('hero stats API client', () => {
         new Response(
           JSON.stringify({
             heroes: [
-              { id: 1, name: 'Axe' },
+              { id: 2, name: 'Axe' },
               { id: 'broken', name: 'Invalid' },
-              { id: 2, name: '' },
+              { id: 3, name: '' },
               null,
             ],
             fetchedAt: '2026-01-01T00:00:00.000Z',
@@ -162,7 +157,7 @@ describe('hero stats API client', () => {
 
     const result = await getHeroes()
 
-    expect(result.heroes).toEqual([{ id: 1, name: 'Axe' }])
+    expect(result.heroes).toEqual([expect.objectContaining({ id: 2, name: 'Axe', attribute: 'strength' })])
   })
 
   it('rejects a response without a heroes array', async () => {
@@ -244,3 +239,5 @@ describe('hero stats API client', () => {
     })
   })
 })
+
+

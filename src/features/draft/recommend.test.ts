@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { recommendFromStratz } from './recommend'
+import { expertInsightFor, recommendFromStratz } from './recommend'
 import type { Hero, Matchup } from '../../shared/types/domains'
 
 const heroes: Hero[] = [
@@ -148,6 +148,16 @@ describe('recommendFromStratz', () => {
       matchups,
     )
 
-    expect(result).toHaveLength(5)
+    expect(result).toHaveLength(7)
+  })
+})
+
+describe('expertInsightFor', () => {
+  it('returns knowledge reasons and items for the supplied enemy', () => {
+    const insight = expertInsightFor('Lifestealer', ['Alchemist'])
+
+    expect(insight?.reasons[0]).toContain('Lifestealer')
+    expect(insight?.items.map((item) => item.item)).toContain('Spirit Vessel')
+    expect(insight?.source).toBe('Экспертная база Draft Lab')
   })
 })

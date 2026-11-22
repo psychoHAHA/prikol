@@ -1,0 +1,27 @@
+﻿.hero-search {
+  position: relative;
+}
+
+.hero-search input {
+  width: 100%;
+}
+
+.hero-options button { display: flex; align-items: center; gap: 10px; }
+.hero-options button img { width: 34px; height: 24px; object-fit: cover; border-radius: 3px; }
+.hero-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(82px,1fr)); gap:6px; margin-top:10px; }
+.hero-tile { border:1px solid var(--line); background:var(--field); color:var(--text); padding:0 0 5px; cursor:pointer; text-align:left; min-width:0; }
+.hero-tile img { width:100%; aspect-ratio:1.55; object-fit:cover; display:block; }
+.hero-tile span { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:5px 6px 0; font-size:10px; }
+.hero-tile:hover { border-color:var(--accent); }
+.hero-tile.selected { border:2px solid var(--accent); background:var(--accent-soft); }
+.hero-tile.enemy.selected { border-color:var(--enemy); background:var(--enemy-soft); }
+.hero-tile:disabled { opacity:.3; cursor:not-allowed; }
+
+
+.hero-categories section { margin-top: 14px; }
+.hero-categories h4 { margin: 0 0 7px; color: var(--text); font-size: 13px; }
+
+@media (max-width: 750px) { .teams { grid-template-columns: 1fr; } }
+.results-screen { width: 100%; }
+.back-button { padding: 12px 0; color: var(--accent); }
+.results-screen > .hint { margin-bottom: 20px; }

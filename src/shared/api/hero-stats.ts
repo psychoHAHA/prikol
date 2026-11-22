@@ -5,10 +5,12 @@ import type {
   Position,
   PositionStats,
 } from '../types/domains'
+import heroCatalog from '../data/hero-catalog.json'
 
 export interface HeroApiDto {
   id: number
   name: string
+  attribute?: 'strength' | 'agility' | 'intelligence' | 'universal'
 }
 
 function isHeroApiDto(value: unknown): value is HeroApiDto {
@@ -60,9 +62,12 @@ function isHeroesApiResponse(value: unknown): value is {
 }
 
 function toHero(dto: HeroApiDto): Hero {
+  const entry = (heroCatalog as Record<string, { attribute?: Hero['attribute']; image: string }>)[dto.id]
   return {
     id: dto.id,
     name: dto.name,
+    attribute: entry?.attribute,
+    image: entry ? `https://cdn.cloudflare.steamstatic.com${entry.image}` : undefined,
   }
 }
 
@@ -89,11 +94,13 @@ export interface MatchupsResponse {
   heroId: number
   fetchedAt: string
   sourceUrl: string
+  weekStart?: string
 }
 
 export interface PositionsResponse {
   positions: PositionStats[]
   fetchedAt: string
+  weekStart?: string
 }
 
 export interface ItemsResponse {

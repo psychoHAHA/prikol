@@ -1,4 +1,4 @@
-import { query } from './stratz-client.js'
+﻿import { query } from './stratz-client.js'
 import { cache, ttl } from './cache.js'
 import { AppError } from './errors.js'
 
@@ -14,13 +14,16 @@ export async function fetchHeroes() {
     !versions.length ||
     !Array.isArray(data.constants?.heroes)
   )
-    throw new AppError(502, 'STRATZ не вернул справочник героев', 'stratz')
+    throw new AppError(502, 'STRATZ РЅРµ РІРµСЂРЅСѓР» СЃРїСЂР°РІРѕС‡РЅРёРє РіРµСЂРѕРµРІ', 'stratz')
   const version = versions.reduce((a, b) =>
     a.asOfDateTime > b.asOfDateTime ? a : b,
   )
   const heroes = (data.constants.heroes || [])
     .filter((h) => h.id && h.displayName)
-    .map((h) => ({ id: h.id, name: h.displayName }))
+    .map((h) => ({
+      id: h.id,
+      name: h.displayName,
+    }))
   const result = {
     heroes,
     gameVersion: version,
@@ -29,3 +32,4 @@ export async function fetchHeroes() {
   cache.set('heroes', { data: result, time: Date.now() })
   return result
 }
+

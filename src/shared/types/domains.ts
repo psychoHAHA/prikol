@@ -8,6 +8,8 @@ export type Position =
 export interface Hero {
   id: number
   name: string
+  attribute?: 'strength' | 'agility' | 'intelligence' | 'universal'
+  image?: string
 }
 
 export interface Item {
@@ -53,4 +55,12 @@ export interface Recommendation {
   games: number
   score: number
   against: RecommendationAgainst[]
+  expert?: ExpertInsight
+}
+
+export interface ExpertInsight {
+  reasons: string[]
+  items: { item: string; reason: string }[]
+  tips: string[]
+  source: string
 }
