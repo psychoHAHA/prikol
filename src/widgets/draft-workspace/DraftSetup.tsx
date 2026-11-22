@@ -1,3 +1,4 @@
+import { useState } from "react"
 import type { Position } from "../../shared/api/hero-stats"
 import type { Hero } from "../../shared/types/domains"
 import { TeamPicker } from "../../features/draft/team-picker/TeamPicker"
@@ -34,6 +35,7 @@ export function DraftSetup({
   onReset,
   onFind,
 }: DraftSetupProps) {
+  const [mobileTeam, setMobileTeam] = useState<"allies" | "enemies">("enemies")
   return (
     <section className="panel draft-setup">
       <div className="panelhead">
@@ -59,6 +61,7 @@ export function DraftSetup({
         <option value="POSITION_5">5 · Полная поддержка</option>
       </select>
       <div className="teams">
+        <div className={`team-panel team-panel--allies ${mobileTeam === "allies" ? "team-panel--active" : ""}`}>
         <TeamPicker
           title="ПРОТИВНИКИ"
           selected={allies}
@@ -67,8 +70,9 @@ export function DraftSetup({
           heroes={heroes}
           limit={4}
           onChange={onAlliesChange}
-        />
+        /></div>
 
+        <div className={`team-panel team-panel--enemies ${mobileTeam === "enemies" ? "team-panel--active" : ""}`}>
         <TeamPicker
           title="ПРОТИВНИКИ"
           selected={enemies}
@@ -78,7 +82,11 @@ export function DraftSetup({
           limit={5}
           onChange={onEnemiesChange}
           enemy
-        />
+        /></div>
+      </div>
+      <div className="mobile-team-tabs" role="tablist" aria-label="Команды">
+        <button type="button" className={mobileTeam === "allies" ? "active" : ""} onClick={() => setMobileTeam("allies")}>Союзники ({allies.length})</button>
+        <button type="button" className={mobileTeam === "enemies" ? "active" : ""} onClick={() => setMobileTeam("enemies")}>Враги ({enemies.length})</button>
       </div>
   
       {enemies.length > 0 && (
